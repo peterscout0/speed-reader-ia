@@ -1,0 +1,690 @@
+body {
+    width: 350px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #141e30 0%, #243b55 100%);
+    color: #e0e0e0;
+}
+
+.popup-container {
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #60aaff;
+}
+
+.subtitle {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* SECCION PRINCIPAL */
+.main-controls {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.toggle-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.toggle-item {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 44px;
+    height: 24px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #60aaff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* CONFIGURACION DE AUDIO */
+html body .popup-container .audio-settings,
+.popup-container .audio-settings,
+.audio-settings,
+div.audio-settings {
+    background: linear-gradient(145deg, #1a1a2e, #16213e) !important;
+    background-color: #1a1a2e !important;
+    border: 3px solid #60aaff !important;
+    border-color: #60aaff !important;
+    border-radius: 16px !important;
+    padding: 20px !important;
+    margin: 20px 0 !important;
+    margin-bottom: 20px !important;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    position: relative !important;
+}
+
+html body .popup-container .audio-settings::before,
+.popup-container .audio-settings::before,
+.audio-settings::before,
+div.audio-settings::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #60aaff, #4a9eff, #60aaff) !important;
+    background-color: #60aaff !important;
+    border-radius: 16px 16px 0 0 !important;
+}
+
+html body .popup-container .audio-settings h3,
+.popup-container .audio-settings h3,
+.audio-settings h3,
+div.audio-settings h3 {
+    color: #60aaff !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin: 0 0 20px 0 !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) !important;
+}
+
+html body .popup-container .audio-settings .setting-group,
+.popup-container .audio-settings .setting-group,
+.audio-settings .setting-group,
+div.audio-settings .setting-group {
+    margin-bottom: 20px !important;
+    margin: 0 0 20px 0 !important;
+}
+
+html body .popup-container .audio-settings .setting-group label,
+.popup-container .audio-settings .setting-group label,
+.audio-settings .setting-group label,
+div.audio-settings .setting-group label {
+    display: block !important;
+    color: #e0e0e0 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    margin-bottom: 8px !important;
+    margin: 0 0 8px 0 !important;
+}
+
+/* Select de voces - Máxima especificidad */
+html body .popup-container .audio-settings .setting-group #voiceSelect,
+html body .popup-container .audio-settings .setting-group select#voiceSelect,
+.popup-container .audio-settings #voiceSelect,
+.audio-settings #voiceSelect,
+#voiceSelect {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    background: #0f1419 !important;
+    background-color: #0f1419 !important;
+    border: 2px solid #60aaff !important;
+    border-color: #60aaff !important;
+    border-radius: 8px !important;
+    color: #e0e0e0 !important;
+    font-size: 14px !important;
+    font-family: inherit !important;
+    box-sizing: border-box !important;
+    transition: all 0.3s ease !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    outline: none !important;
+}
+
+/* Slider de velocidad - Máxima especificidad */
+html body .popup-container .audio-settings .setting-group #speedRange,
+html body .popup-container .audio-settings .setting-group input#speedRange,
+.popup-container .audio-settings #speedRange,
+.audio-settings #speedRange,
+#speedRange {
+    width: 100% !important;
+    height: 8px !important;
+    background: #0f1419 !important;
+    background-color: #0f1419 !important;
+    border: 2px solid #60aaff !important;
+    border-color: #60aaff !important;
+    border-radius: 4px !important;
+    outline: none !important;
+    cursor: pointer !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    margin: 10px 0 !important;
+}
+
+/* Slider de tono - Máxima especificidad */
+html body .popup-container .audio-settings .setting-group #pitchRange,
+html body .popup-container .audio-settings .setting-group input#pitchRange,
+.popup-container .audio-settings #pitchRange,
+.audio-settings #pitchRange,
+#pitchRange {
+    width: 100% !important;
+    height: 8px !important;
+    background: #0f1419 !important;
+    background-color: #0f1419 !important;
+    border: 2px solid #60aaff !important;
+    border-color: #60aaff !important;
+    border-radius: 4px !important;
+    outline: none !important;
+    cursor: pointer !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    margin: 10px 0 !important;
+}
+
+/* Thumbs de sliders - Webkit */
+#speedRange::-webkit-slider-thumb,
+#pitchRange::-webkit-slider-thumb {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    width: 22px !important;
+    height: 22px !important;
+    background: #60aaff !important;
+    background-color: #60aaff !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    border: 3px solid white !important;
+    border-color: white !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Thumbs de sliders - Firefox */
+#speedRange::-moz-range-thumb,
+#pitchRange::-moz-range-thumb {
+    width: 22px !important;
+    height: 22px !important;
+    background: #60aaff !important;
+    background-color: #60aaff !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    border: 3px solid white !important;
+    border-color: white !important;
+}
+
+/* Tracks de sliders - Firefox */
+#speedRange::-moz-range-track,
+#pitchRange::-moz-range-track {
+    background: #0f1419 !important;
+    background-color: #0f1419 !important;
+    border: 2px solid #60aaff !important;
+    border-color: #60aaff !important;
+    border-radius: 4px !important;
+    height: 8px !important;
+}
+
+.setting-group select,
+.setting-group input[type="text"],
+.setting-group input[type="password"] {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    background: #0f1419 !important;
+    border: 1px solid #60aaff !important;
+    border-radius: 8px !important;
+    color: #e0e0e0 !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important;
+    transition: all 0.3s ease !important;
+}
+
+.setting-group select:focus,
+.setting-group input:focus,
+#voiceSelect:focus,
+#speedRange:focus,
+#pitchRange:focus {
+    outline: none !important;
+    border-color: #4a9eff !important;
+    border: 2px solid #4a9eff !important;
+    box-shadow: 0 0 0 3px rgba(96, 170, 255, 0.3) !important;
+}
+
+/* OVERRIDE TOTAL para inputs range */
+.setting-group input[type="range"],
+input[type="range"]#speedRange,
+input[type="range"]#pitchRange {
+    width: 100% !important;
+    height: 8px !important;
+    background: #0f1419 !important;
+    background-color: #0f1419 !important;
+    border: 2px solid #60aaff !important;
+    border-color: #60aaff !important;
+    border-radius: 4px !important;
+    outline: none !important;
+    cursor: pointer !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    margin: 10px 0 !important;
+}
+
+.setting-group input[type="range"]::-webkit-slider-thumb,
+input[type="range"]#speedRange::-webkit-slider-thumb,
+input[type="range"]#pitchRange::-webkit-slider-thumb {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    width: 22px !important;
+    height: 22px !important;
+    background: #60aaff !important;
+    background-color: #60aaff !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    border: 3px solid white !important;
+    border-color: white !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+#speedValue, #pitchValue {
+    background: linear-gradient(135deg, #60aaff, #4a9eff);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+/* CONFIGURACION GEMINI */
+.gemini-settings {
+    background: linear-gradient(145deg, #1a1a2e, #16213e);
+    border: 2px solid #60aaff;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.gemini-settings h3 {
+    color: #60aaff;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.ai-mode-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.ai-mode-label:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ai-mode-label span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.setting-group small {
+    display: block;
+    font-size: 11px;
+    opacity: 0.7;
+    margin-top: 3px;
+    color: #a0a0a0;
+}
+
+.ai-status {
+    text-align: center;
+    margin-top: 10px;
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+
+#aiStatusIndicator {
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.footer {
+    text-align: center;
+}
+
+.save-btn {
+    background: linear-gradient(135deg, rgba(96, 170, 255, 0.9) 0%, rgba(60, 130, 255, 1) 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(96, 170, 255, 0.3);
+}
+
+.save-btn:hover {
+    background: linear-gradient(135deg, rgba(110, 180, 255, 1) 0%, rgba(70, 140, 255, 1) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(96, 170, 255, 0.4);
+}
+
+.status {
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.8;
+    min-height: 16px;
+}
+
+/* Estilos para configuración de API key */
+.setting-item {
+    margin-bottom: 20px;
+}
+
+.setting-info label {
+    display: block;
+    font-weight: 600;
+    color: #60aaff;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.setting-description {
+    font-size: 12px;
+    color: rgba(224, 224, 224, 0.7);
+    margin: 5px 0 10px 0;
+    line-height: 1.4;
+}
+
+.setting-description a {
+    color: #60aaff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.setting-description a:hover {
+    text-decoration: underline;
+}
+
+.api-key-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.api-key-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid rgba(96, 170, 255, 0.3);
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    transition: all 0.2s ease;
+}
+
+.api-key-input:focus {
+    outline: none;
+    border-color: #60aaff;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 2px rgba(96, 170, 255, 0.1);
+}
+
+.api-key-input::placeholder {
+    color: rgba(224, 224, 224, 0.5);
+}
+
+.toggle-api-key, .test-api-key {
+    padding: 8px 12px;
+    border: 1px solid rgba(96, 170, 255, 0.3);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-icon {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) saturate(100%) invert(87%) sepia(8%) saturate(1019%) hue-rotate(188deg) brightness(94%) contrast(89%);
+    transition: filter 0.2s ease;
+}
+
+.toggle-api-key:hover, .test-api-key:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.toggle-api-key:hover .button-icon, .test-api-key:hover .button-icon {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(100%) saturate(600%) hue-rotate(180deg) brightness(120%) contrast(120%);
+}
+
+.test-api-key {
+    background: rgba(96, 170, 255, 0.8);
+    color: white;
+    border-color: #60aaff;
+}
+
+.test-api-key .button-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.test-api-key:hover {
+    background: #60aaff;
+}
+
+.test-api-key:hover .button-icon {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.test-api-key:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.api-key-status {
+    margin-top: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    display: none;
+}
+
+.api-key-status.success {
+    background: rgba(96, 170, 255, 0.2);
+    color: #60aaff;
+    border: 1px solid rgba(96, 170, 255, 0.3);
+    display: block;
+}
+
+.api-key-status.error {
+    background: rgba(255, 107, 107, 0.2);
+    color: #ff6b6b;
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    display: block;
+}
+
+.api-key-status.loading {
+    background: rgba(96, 170, 255, 0.2);
+    color: #60aaff;
+    border: 1px solid rgba(96, 170, 255, 0.3);
+    display: block;
+}
+
+.api-key-status.warning {
+    background: rgba(96, 170, 255, 0.2);
+    color: #60aaff;
+    border: 1px solid rgba(96, 170, 255, 0.3);
+    display: block;
+}
+
+.api-help {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid #60aaff;
+}
+
+.api-help details {
+    cursor: pointer;
+}
+
+.api-help summary {
+    font-weight: 600;
+    color: #60aaff;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.api-help ol {
+    margin: 10px 0;
+    padding-left: 20px;
+    color: rgba(224, 224, 224, 0.8);
+}
+
+.api-help li {
+    margin: 5px 0;
+    line-height: 1.4;
+    font-size: 12px;
+}
+
+.api-help a {
+    color: #60aaff;
+    text-decoration: none;
+}
+
+.api-help a:hover {
+    text-decoration: underline;
+}
+
+.api-help p {
+    margin: 10px 0 0 0;
+    font-size: 11px;
+    color: rgba(224, 224, 224, 0.6);
+}
+
+/* Barra de progreso de uso diario */
+.usage-tracker {
+    margin: 15px 0;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(96, 170, 255, 0.2);
+}
+
+.usage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.usage-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(224, 224, 224, 0.9);
+}
+
+.usage-stats {
+    font-size: 11px;
+    color: rgba(156, 163, 175, 0.8);
+    font-weight: 600;
+}
+
+.usage-percentage {
+    color: rgba(96, 170, 255, 0.8);
+    margin-left: 4px;
+}
+
+.progress-container {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.3s ease, background 0.3s ease;
+    position: relative;
+}
+
+.usage-note {
+    text-align: center;
+    margin-top: 6px;
+}
+
+.usage-note small {
+    color: rgba(224, 224, 224, 0.5);
+    font-size: 10px;
+}

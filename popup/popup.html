@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="extensionName">Speed Reader IA</title>
+    <link rel="stylesheet" href="popup.css">
+    <style>
+        .gemini-settings {
+            background: linear-gradient(145deg, #1a1a2e, #16213e) !important;
+            border: 2px solid #60aaff !important;
+            border-radius: 12px !important;
+            padding: 20px !important;
+            margin: 15px 0 !important;
+            box-shadow: 0 8px 32px rgba(96, 170, 255, 0.15) !important;
+        }
+        
+        .gemini-settings h3 {
+            color: #60aaff !important;
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            margin: 0 0 18px 0 !important;
+            text-align: center !important;
+        }
+        
+        .ai-status {
+            text-align: center !important;
+            margin-top: 15px !important;
+        }
+        
+        .ai-status span {
+            font-size: 12px !important;
+            font-weight: 500 !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-container">
+        <div class="header">
+            <h1 data-i18n="extensionName">Speed Reader IA</h1>
+            <p class="subtitle" data-i18n="extensionDescription">AI-powered text-to-speech extension with contextual reading tools</p>
+        </div>
+        
+        <div class="main-controls">
+            <div class="toggle-section">
+
+                
+                <div class="toggle-item">
+                    <label class="toggle-label">
+                        <span data-i18n="smartTextActions">Smart Text Actions</span>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="contextualIcons" checked>
+                            <span class="slider"></span>
+                        </div>
+                    </label>
+                </div>
+                
+                <div class="toggle-item">
+                    <label class="toggle-label">
+                        <span data-i18n="globalPlayer">Global Player</span>
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="globalPlayer" checked>
+                            <span class="slider"></span>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gemini-settings">
+            <h3 data-i18n="aiIntegration">AI Integration</h3>
+            
+            <div class="setting-item">
+                <div class="setting-info">
+                    <label for="geminiApiKey" data-i18n="geminiApiKey">Google Gemini API Key</label>
+                    <p class="setting-description">
+                        <span data-i18n="apiKeyDescription">Enter your personal API key from Google AI Studio to use AI query functions.</span>
+                        <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">
+                            <span data-i18n="getFreeApiKey">Get free API key →</span>
+                        </a>
+                    </p>
+                </div>
+                <div class="api-key-container">
+                    <input 
+                        type="password" 
+                        id="geminiApiKey" 
+                        data-i18n-attr="placeholder" 
+                        data-i18n="apiKeyPlaceholder"
+                        placeholder="AIzaSy... (paste your API key here)"
+                        class="api-key-input"
+                    >
+                    <button type="button" id="toggleApiKey" class="toggle-api-key" data-i18n-attr="title" data-i18n="showHideApiKey" title="Show/Hide API key">
+                        <img src="../icons/hidden-eye.svg" class="button-icon" alt="Toggle visibility">
+                    </button>
+                    <button type="button" id="testApiKey" class="test-api-key" data-i18n-attr="title" data-i18n="testConnection" title="Test connection">
+                        <img src="../icons/conection.svg" class="button-icon" alt="Test connection">
+                    </button>
+                </div>
+                <div id="apiKeyStatus" class="api-key-status"></div>
+            </div>
+
+            <!-- Barra de progreso de uso diario -->
+            <div class="usage-tracker">
+                <div class="usage-header">
+                    <span class="usage-label" data-i18n="queriesPerformed">Queries performed (estimated)</span>
+                    <span class="usage-stats">
+                        <span id="usageCount">0</span> <span data-i18n="queries">queries</span>
+                        <span id="usagePercentage" class="usage-percentage" data-i18n="today">today</span>
+                    </span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="usageProgress"></div>
+                </div>
+                <div class="usage-note">
+                    <small data-i18n="usageNote">Only counts queries from this extension. Actual limits may vary.</small>
+                </div>
+            </div>
+            
+            <div class="api-help">
+                <details>
+                    <summary data-i18n="howToGetApiKey">How to get your free API key</summary>
+                    <ol>
+                        <li><span data-i18n="goToGoogleAI">Go to</span> <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a></li>
+                        <li data-i18n="signInGoogle">Sign in with your Google account</li>
+                        <li data-i18n="clickCreateApiKey">Click "Create API key"</li>
+                        <li data-i18n="copyPasteKey">Copy the key and paste it here</li>
+                        <li data-i18n="readyAiAccess">Ready! You'll have access to AI queries</li>
+                    </ol>
+                    <p><strong data-i18n="note">Note:</strong> <span data-i18n="apiKeySafelyStored">Your API key is safely stored only in your browser.</span></p>
+                </details>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <button id="saveSettings" class="save-btn" data-i18n="saveSettings">Save Settings</button>
+            <div class="status" id="statusMessage"></div>
+        </div>
+    </div>
+    
+    <script src="../utils/i18n.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

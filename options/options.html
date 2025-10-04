@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="optionsPageTitle">Speed Reader IA - Options</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="../icons/icon-48.png" alt="Speed Reader IA" class="logo">
+                <div class="header-text">
+                    <h1 data-i18n="extensionName">Speed Reader IA</h1>
+                    <p data-i18n="optionsSubtitle">History management and advanced settings</p>
+                </div>
+            </div>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="history" data-i18n="consultationHistory">Consultation History</button>
+            <button class="tab-button" data-tab="settings" data-i18n="advancedSettings">Advanced Settings</button>
+            <button class="tab-button" data-tab="export" data-i18n="exportImport">Export/Import</button>
+        </nav>
+
+        <!-- Tab: Historial de Consultas -->
+        <div id="history" class="tab-content active">
+            <div class="chat-interface">
+                <!-- Sidebar de chats -->
+                <div class="chat-sidebar">
+                    <div class="sidebar-header">
+                        <h3 data-i18n="consultationHistory">Consultation History</h3>
+                        <div class="global-actions">
+                            <button id="clearAllHistory" class="btn-icon" title="Clear all history">
+                                <img src="../icons/trash.svg" alt="Delete" width="16" height="16" class="icon-svg">
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-categories">
+                        <!-- Sección de Imágenes -->
+                        <div class="chat-category" data-category="images">
+                        <div class="category-header" data-toggle="images">
+                            <img src="../icons/image.svg" alt="Images" width="16" height="16" class="category-icon">
+                            <span class="category-title" data-i18n="imageConsultations">Image Consultations</span>
+                            <span class="count" id="imageCount">0</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>
+                        <div class="category-content" id="imageChats">
+                            <div class="empty-state">
+                                <p>No hay consultas de imágenes</p>
+                            </div>
+                        </div>
+                        <div class="category-actions">
+                            <button id="clearImageHistory" class="btn-small btn-danger">Limpiar</button>
+                            <button id="exportImageHistory" class="btn-small btn-secondary">Exportar</button>
+                        </div>
+                    </div>
+
+                    <!-- Code Section -->
+                    <div class="chat-category" data-category="code">
+                        <div class="category-header" data-toggle="code">
+                            <img src="../icons/code.svg" alt="Code" width="16" height="16" class="category-icon">
+                            <span class="category-title" data-i18n="codeConsultations">Code Consultations</span>
+                            <span class="count" id="codeCount">0</span>
+                            <span class="toggle-icon">▼</span>
+                        </div>  
+                        <div class="category-content" id="codeChats">
+                            <div class="empty-state">
+                                <p data-i18n="noCodeConsultations">No code consultations</p>
+                            </div>
+                        </div>
+                        <div class="category-actions">
+                            <button id="clearCodeHistory" class="btn-small btn-danger" data-i18n="clear">Clear</button>
+                            <button id="exportCodeHistory" class="btn-small btn-secondary" data-i18n="export">Export</button>
+                        </div>
+                    </div>
+
+                    <!-- Sección de Texto -->
+
+                    </div>
+                </div>
+
+                <!-- Área principal del chat -->
+                <div class="chat-main">
+                    <div class="chat-welcome">
+                        <div class="welcome-content">
+                            <img src="../icons/describe.svg" alt="Consultations" width="48" height="48" class="welcome-icon">
+                            <h3 data-i18n="welcomeToHistory">Welcome to Consultation History</h3>
+                            <p data-i18n="selectConsultationDesc">Select a consultation from the history to view the complete details of the conversation with Gemini AI.</p>
+                            <div class="stats">
+                                <div class="stat-item">
+                                    <img src="../icons/image.svg" data-i18n-attr="alt:imagesAnalyzed" alt="Images Analyzed" width="24" height="24" class="stat-icon">
+                                    <span data-i18n="imagesAnalyzed">Images Analyzed</span>
+                                    <span class="stat-number" id="totalImages">0</span>
+                                </div>
+                                <div class="stat-item">
+                                    <img src="../icons/code.svg" data-i18n-attr="alt:codeReviewed" alt="Code Reviewed" width="24" height="24" class="stat-icon">
+                                    <span data-i18n="codeReviewed">Code Reviewed</span>
+                                    <span class="stat-number" id="totalCode">0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-content" id="chatContent" style="display: none;">
+                        <!--contenido del chat seleccionado -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menú contextual -->
+            <div class="context-menu" id="contextMenu" style="display: none;">
+                <div class="context-menu-item" data-action="delete">
+                    <img src="../icons/trash.svg" data-i18n-attr="alt:deleteConsultation" alt="Delete Consultation" width="16" height="16" class="menu-icon">
+                    <span data-i18n="deleteConsultation">Delete Consultation</span>
+                </div>
+                <div class="context-menu-item" data-action="export" id="exportQueryItem">
+                    <img src="../icons/expand.svg" data-i18n-attr="alt:exportConsultation" alt="Export Consultation" width="16" height="16" class="menu-icon">
+                    <span data-i18n="exportConsultation">Export Consultation</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab: Configuración Avanzada -->
+        <div id="settings" class="tab-content">
+            <div class="section">
+                <h2 data-i18n="historyConfiguration">History Configuration</h2>
+                <div class="setting-item">
+                    <label for="maxHistoryItems" data-i18n="maxHistoryItems">Maximum items in history:</label>
+                    <input type="number" id="maxHistoryItems" min="10" max="1000" value="100">
+                    <p class="help-text" id="maxHistoryHelp" data-i18n="maxHistoryHelp">Maximum number of consultations to keep in history (10-1000)</p>
+                </div>
+                
+                <div class="setting-item">
+                    <label for="autoCleanup" data-i18n="autoCleanup">Auto-cleanup history:</label>
+                    <select id="autoCleanup">
+                        <option value="never" data-i18n="never">Never</option>
+                        <option value="7" data-i18n="after7Days">After 7 days</option>
+                        <option value="30" data-i18n="after30Days">After 30 days</option>
+                        <option value="90" selected data-i18n="after90Days">After 90 days</option>
+                    </select>
+                    <p class="help-text" id="autoCleanupHelp" data-i18n="autoCleanupHelp">Automatically delete old consultations</p>
+                </div>
+
+                <div class="setting-item">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="saveImages" checked>
+                        <label for="saveImages" data-i18n="saveImageAnalysis">Save image analysis in history</label>
+                    </div>
+                </div>
+
+                <div class="setting-item">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="saveCode" checked>
+                        <label for="saveCode" data-i18n="saveCodeAnalysis">Save code analysis in history</label>
+                    </div>
+                </div>
+
+                <button id="saveSettings" class="btn btn-primary" data-i18n="saveConfiguration">Save Configuration</button>
+            </div>
+        </div>
+
+        <!-- Tab: Exportar/Importar -->
+        <div id="export" class="tab-content">
+            <div class="section">
+                <h2 id="exportDataTitle" data-i18n="exportData">Export Data</h2>
+                <p id="exportDesc" data-i18n="exportDesc">Export your consultation history for backup or analysis:</p>
+                <div class="export-options">
+                    <button id="exportJSON" class="btn btn-primary" data-i18n="exportAsJSON">Export as JSON</button>
+                    <button id="exportCSV" class="btn btn-secondary" data-i18n="exportAsCSV">Export as CSV</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 id="importDataTitle" data-i18n="importData">Import Data</h2>
+                <p id="importDesc" data-i18n="importDesc">Import a previously exported history:</p>
+                <div class="import-area">
+                    <input type="file" id="importFile" accept=".json,.csv" style="display: none;">
+                    <button id="selectImportFile" class="btn btn-secondary" data-i18n="selectFile">Select File</button>
+                    <button id="importData" class="btn btn-primary" disabled data-i18n="importData">Import Data</button>
+                </div>
+                <div id="importStatus" class="status-message"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../utils/i18n.js"></script>
+    <script src="options.js"></script>
+</body>
+</html>

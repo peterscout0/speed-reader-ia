@@ -1,0 +1,1651 @@
+/* Menú contextual principal */
+.selection-context-menu {
+    position: fixed;
+    background: rgba(35, 35, 40, 0.95);
+    border: 1px solid rgba(100, 200, 255, 0.3);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 8px;
+    z-index: 2147483647;
+    opacity: 0;
+    transform: scale(0.8) translateY(-10px);
+    transition: all 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.selection-context-menu.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Opciones del menú contextual */
+.context-menu-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: rgba(220, 220, 220, 0.9);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    min-width: 140px;
+}
+
+.context-menu-option:hover {
+    background: rgba(100, 200, 255, 0.15);
+    color: rgba(255, 255, 255, 1);
+    transform: translateX(2px);
+}
+
+.context-menu-option:active {
+    background: rgba(100, 200, 255, 0.25);
+    transform: translateX(2px) scale(0.98);
+}
+
+/* Iconos de las opciones */
+.option-icon {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) saturate(100%) invert(87%) sepia(8%) saturate(1019%) hue-rotate(188deg) brightness(94%) contrast(89%);
+    transition: filter 0.2s ease;
+    flex-shrink: 0;
+}
+
+.context-menu-option:hover .option-icon {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(100%) saturate(600%) hue-rotate(180deg) brightness(120%) contrast(120%);
+}
+
+/* Etiquetas de las opciones */
+.option-label {
+    font-size: 14px;
+    font-weight: 500;
+    flex: 1;
+}
+
+/* Notificaciones del sistema de selección */
+.selection-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(31, 41, 55, 0.9);
+    color: rgba(156, 163, 175, 1);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(100, 200, 255, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 2147483646;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 300px;
+}
+
+.selection-notification.show {
+    transform: translateX(0);
+}
+
+.selection-notification-success {
+    border-color: rgba(100, 200, 255, 0.3);
+    background: rgba(31, 41, 55, 0.9);
+    color: rgba(156, 163, 175, 1);
+}
+
+.selection-notification-error {
+    border-color: rgba(100, 200, 255, 0.3);
+    background: rgba(31, 41, 55, 0.9);
+    color: rgba(156, 163, 175, 1);
+}
+
+.selection-notification-info {
+    border-color: rgba(100, 200, 255, 0.3);
+    background: rgba(31, 41, 55, 0.9);
+    color: rgba(156, 163, 175, 1);
+}
+
+/* Modales del sistema de selección */
+.selection-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2147483645;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.selection-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.2s ease;
+}
+
+.selection-modal-content {
+    background: linear-gradient(135deg, rgba(35, 35, 40, 0.95), rgba(45, 45, 50, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        inset 2px 2px 6px rgba(255, 255, 255, 0.03),
+        inset -2px -2px 6px rgba(0, 0, 0, 0.2);
+    max-width: 95vw;
+    max-height: 90vh;
+    width: 800px;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.selection-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(45, 45, 50, 0.3);
+}
+
+.selection-modal-header h3 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.selection-modal-close {
+    background: rgba(45, 45, 50, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 22px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    line-height: 1;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selection-modal-close:hover {
+    background: rgba(55, 55, 60, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 1);
+}
+
+.selection-modal-body {
+    padding: 20px 24px 24px;
+    color: rgba(220, 220, 220, 0.9);
+    overflow-y: auto;
+    max-height: calc(90vh - 100px);
+}
+
+/* Contenido específico del modal */
+.code-preview {
+    background: rgba(20, 20, 25, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.code-preview p {
+    margin: 0 0 12px 0;
+    color: rgba(220, 220, 220, 0.9);
+}
+
+.code-preview pre {
+    margin: 12px 0 0 0;
+    background: rgba(15, 15, 20, 0.8);
+    border-radius: 8px;
+    padding: 16px;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(240, 240, 245, 0.95);
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-width: 100%;
+}
+
+.image-consultation {
+    text-align: center;
+}
+
+.image-consultation img {
+    display: block;
+    margin: 0 auto 16px;
+    border: 1px solid rgba(100, 200, 255, 0.2);
+}
+
+.image-consultation p {
+    margin: 0;
+    color: rgba(220, 220, 220, 0.9);
+    font-size: 14px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .selection-context-menu {
+        padding: 6px;
+        border-radius: 10px;
+    }
+    
+    .context-menu-option {
+        padding: 10px 14px;
+        font-size: 15px;
+        min-width: 120px;
+    }
+    
+    .option-icon {
+        width: 18px;
+        height: 18px;
+    }
+    
+    .selection-modal-content {
+        width: 95vw;
+        margin: 20px;
+    }
+    
+    .selection-modal-header {
+        padding: 16px 20px 12px;
+    }
+    
+    .selection-modal-header h3 {
+        font-size: 16px;
+    }
+    
+    .selection-modal-body {
+        padding: 16px 20px 20px;
+    }
+    
+    .selection-notification {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+}
+
+/* Estados especiales */
+.selection-context-menu[data-content-type="code"] {
+    border-color: rgba(100, 200, 255, 0.4);
+}
+
+.selection-context-menu[data-content-type="image"] {
+    border-color: rgba(168, 85, 247, 0.4);
+}
+
+.selection-context-menu[data-content-type="text"] {
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+/* Prevenir interferencia con otros elementos */
+.selection-context-menu * {
+    box-sizing: border-box;
+}
+
+.selection-modal * {
+    box-sizing: border-box;
+}
+
+.selection-notification * {
+    box-sizing: border-box;
+}
+
+.contextual-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2147483647;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: modalFadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(40, 40, 45, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 
+        0 25px 80px rgba(0, 0, 0, 0.6),
+        inset 2px 2px 6px rgba(255, 255, 255, 0.03),
+        inset -2px -2px 6px rgba(0, 0, 0, 0.2);
+    max-width: 95vw;
+    max-height: 90vh;
+    width: 900px;
+    overflow: hidden;
+    animation: modalSlideIn 0.4s ease;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 28px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(45, 45, 50, 0.5);
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modal-close {
+    background: rgba(45, 45, 50, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    line-height: 1;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    background: rgba(55, 55, 60, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 1);
+}
+
+.modal-body {
+    padding: 24px 28px 28px;
+    color: rgba(220, 220, 220, 0.9);
+    overflow-y: auto;
+    max-height: calc(90vh - 120px);
+}
+
+/* Sección de input de consulta */
+.query-input-section {
+    margin-bottom: 24px;
+}
+
+.query-input-container {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.query-input {
+    flex: 1;
+    background: rgba(96, 170, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: rgba(240, 240, 240, 0.9);
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    min-height: 60px;
+    resize: vertical;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+.query-input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(96, 170, 255, 0.15);
+}
+
+.query-input::placeholder {
+    color: rgba(220, 220, 220, 0.5);
+}
+
+.query-submit-btn {
+    background: linear-gradient(135deg, rgba(96, 170, 255, 0.2) 0%, rgba(60, 130, 255, 0.3) 100%);
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    /* Neumorphism transparente */
+    box-shadow: 
+        inset 2px 2px 6px rgba(0, 0, 0, 0.15),
+        inset -2px -2px 6px rgba(255, 255, 255, 0.05),
+        0 2px 8px rgba(96, 170, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.query-submit-btn:hover {
+    background: linear-gradient(135deg, rgba(110, 180, 255, 0.4) 0%, rgba(70, 140, 255, 0.5) 100%);
+    border-color: rgba(140, 210, 255, 0.4);
+    color: rgba(255, 255, 255, 1);
+    /* Neumorphism hover */
+    box-shadow: 
+        inset 3px 3px 8px rgba(0, 0, 0, 0.2),
+        inset -3px -3px 8px rgba(255, 255, 255, 0.08),
+        0 4px 12px rgba(96, 170, 255, 0.3);
+}
+
+/* Consultas predefinidas */
+.preset-queries {
+    margin-bottom: 24px;
+}
+
+.preset-queries h3 {
+    margin: 0 0 16px 0;
+    color: rgba(200, 200, 200, 0.8);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.query-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.query-btn {
+    background: rgba(45, 45, 50, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: rgba(200, 200, 200, 0.9);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.query-btn:hover {
+    background: rgba(55, 55, 60, 0.8);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: rgba(240, 240, 240, 1);
+}
+
+/* Área de respuesta */
+.response-area {
+    background: rgba(20, 20, 25, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.response-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: rgba(30, 30, 35, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.response-title {
+    margin: 0;
+    color: rgba(240, 240, 240, 0.9);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.response-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.response-control-btn {
+    background: linear-gradient(135deg, rgba(96, 170, 255, 0.15) 0%, rgba(60, 130, 255, 0.2) 100%);
+    border: 1px solid rgba(100, 200, 255, 0.3);
+    border-radius: 6px;
+    padding: 6px;
+    color: rgba(100, 200, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    /* Neumorphism pequeño */
+    box-shadow: 
+        inset 1px 1px 2px rgba(0, 0, 0, 0.1),
+        inset -1px -1px 2px rgba(255, 255, 255, 0.02),
+        0 1px 3px rgba(96, 170, 255, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.response-control-btn:hover {
+    background: linear-gradient(135deg, rgba(110, 180, 255, 0.2) 0%, rgba(70, 140, 255, 0.25) 100%);
+    color: rgba(100, 200, 255, 1);
+    /* Neumorphism hover pequeño */
+    box-shadow: 
+        inset 2px 2px 3px rgba(0, 0, 0, 0.15),
+        inset -2px -2px 3px rgba(255, 255, 255, 0.04),
+        0 2px 4px rgba(96, 170, 255, 0.15);
+}
+
+.response-content {
+    padding: 20px;
+    min-height: 100px;
+    color: rgba(220, 220, 220, 0.9);
+    line-height: 1.6;
+}
+
+/* Elementos específicos */
+.code-preview {
+    background: rgba(20, 20, 25, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.code-preview p {
+    margin: 0 0 12px 0;
+    color: rgba(240, 240, 245, 0.9);
+}
+
+.code-preview pre {
+    margin: 12px 0 0 0;
+    background: rgba(15, 15, 20, 0.8);
+    border-radius: 8px;
+    padding: 16px;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(240, 240, 245, 0.95);
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-width: 100%;
+}
+
+.image-consultation {
+    text-align: center;
+}
+
+.image-consultation img {
+    display: block;
+    margin: 0 auto 16px;
+}
+
+.image-consultation p {
+    margin: 0;
+    color: rgba(220, 220, 220, 0.9);
+    font-size: 14px;
+}
+
+/* Spinner de carga */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Animaciones de modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Responsivo para modales */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95vw;
+        margin: 10px;
+        border-radius: 16px;
+    }
+    
+    .modal-header {
+        padding: 20px 24px 16px;
+    }
+    
+    .modal-header h2 {
+        font-size: 18px;
+    }
+    
+    .modal-body {
+        padding: 20px 24px 24px;
+    }
+    
+    .query-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .query-input-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    
+    .response-header {
+        padding: 12px 16px;
+    }
+    
+    .response-content {
+        padding: 16px;
+    }
+}
+
+/* Panel de control de lectura */
+.selection-reading-control {
+    position: absolute;
+    background: rgba(30, 30, 35, 0.95) !important;
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    border: 1px solid rgba(100, 200, 255, 0.2);
+    padding: 16px 20px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(100, 200, 255, 0.1) inset;
+    z-index: 2147483645;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.selection-reading-control.visible {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+}
+
+.selection-reading-control.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+.reading-control-button {
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(100, 200, 255, 0.2), rgba(100, 200, 255, 0.1));
+    border: 1px solid rgba(100, 200, 255, 0.3);
+    color: rgba(100, 200, 255, 1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 4px 16px rgba(100, 200, 255, 0.2),
+        0 0 0 1px rgba(100, 200, 255, 0.1) inset;
+}
+
+.reading-control-button:hover {
+    background: linear-gradient(135deg, rgba(100, 200, 255, 0.3), rgba(100, 200, 255, 0.2));
+    border-color: rgba(100, 200, 255, 0.5);
+    transform: translateY(-1px);
+    box-shadow: 
+        0 6px 20px rgba(100, 200, 255, 0.3),
+        0 0 0 1px rgba(100, 200, 255, 0.2) inset;
+}
+
+.reading-control-button:active {
+    transform: translateY(0);
+}
+
+.reading-control-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(73%) sepia(61%) saturate(2807%) hue-rotate(194deg) brightness(101%) contrast(101%);
+}
+
+.reading-control-status {
+    color: rgba(220, 220, 230, 0.9);
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 0;
+    white-space: nowrap;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de cierre */
+.reading-control-close {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 80, 80, 0.2);
+    border: 1px solid rgba(255, 80, 80, 0.3);
+    color: rgba(255, 80, 80, 1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    line-height: 1;
+    padding: 0;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.reading-control-close:hover {
+    background: rgba(255, 80, 80, 0.3);
+    border-color: rgba(255, 80, 80, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(255, 80, 80, 0.3);
+}
+
+.reading-control-close:active {
+    transform: scale(0.95);
+    background: rgba(255, 80, 80, 0.4);
+}
+
+/* Estados del botón de lectura */
+.reading-control-button.ready {
+    background: linear-gradient(135deg, rgba(100, 200, 255, 0.2), rgba(100, 200, 255, 0.1));
+    border-color: rgba(100, 200, 255, 0.3);
+}
+
+.reading-control-button.ready:hover {
+    background: linear-gradient(135deg, rgba(100, 200, 255, 0.3), rgba(100, 200, 255, 0.2));
+    border-color: rgba(100, 200, 255, 0.5);
+}
+
+.reading-control-button.reading {
+    background: linear-gradient(135deg, rgba(100, 200, 255, 0.4), rgba(100, 200, 255, 0.3));
+    border-color: rgba(100, 200, 255, 0.6);
+    animation: readingPulse 2s ease-in-out infinite;
+}
+
+.reading-control-button.reading:hover {
+    background: linear-gradient(135deg, rgba(100, 200, 255, 0.5), rgba(100, 200, 255, 0.4));
+    border-color: rgba(100, 200, 255, 0.7);
+}
+
+.reading-control-button.paused {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.3), rgba(251, 191, 36, 0.2));
+    border-color: rgba(251, 191, 36, 0.5);
+    color: rgba(251, 191, 36, 1);
+}
+
+.reading-control-button.paused:hover {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.4), rgba(251, 191, 36, 0.3));
+    border-color: rgba(251, 191, 36, 0.6);
+}
+
+.reading-control-button.paused .reading-control-icon {
+    filter: brightness(0) saturate(100%) invert(79%) sepia(54%) saturate(445%) hue-rotate(359deg) brightness(103%) contrast(97%);
+}
+
+/* Indicador de progreso en el botón - estilo reproductor global */
+.reading-control-button::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.reading-control-button.reading::before {
+    border-top-color: rgba(100, 200, 255, 0.8);
+    animation: readingRotate 2s linear infinite;
+}
+
+/* Animaciones */
+@keyframes readingPulse {
+    0%, 100% {
+        box-shadow: 
+            0 4px 16px rgba(100, 200, 255, 0.2),
+            0 0 0 1px rgba(100, 200, 255, 0.1) inset;
+    }
+    50% {
+        box-shadow: 
+            0 6px 24px rgba(100, 200, 255, 0.4),
+            0 0 0 1px rgba(100, 200, 255, 0.2) inset;
+    }
+}
+
+@keyframes readingRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Resaltado del texto durante la lectura - reproductor global */
+.selection-text-highlight {
+    background-color: rgba(100, 200, 255, 0.1) !important;
+    border-left: 4px solid rgba(100, 200, 255, 0.8) !important;
+    padding-left: 12px !important;
+    border-radius: 0 6px 6px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(100, 200, 255, 0.2);
+}
+
+/* Animación pulsante durante la lectura */
+.selection-text-highlight.reading {
+    animation: selectionReading 2s ease-in-out infinite;
+}
+
+@keyframes selectionReading {
+    0%, 100% {
+        box-shadow: 0 0 8px rgba(100, 200, 255, 0.2);
+        background-color: rgba(100, 200, 255, 0.1) !important;
+    }
+    50% {
+        box-shadow: 0 0 16px rgba(100, 200, 255, 0.4);
+        background-color: rgba(100, 200, 255, 0.15) !important;
+    }
+}
+
+/* indicador de integración con IA */
+.ai-integration-notice {
+    background: rgba(45, 45, 50, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin: 16px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.ai-integration-notice strong {
+    color: rgba(96, 170, 255, 0.9);
+    font-weight: 600;
+}
+
+@keyframes aiGlow {
+    0%, 100% {
+        box-shadow: 0 2px 8px rgba(102, 126, 234, 0.25);
+    }
+    50% {
+        box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+    }
+}
+
+/* Estilos específicos para código consultado */
+.consulted-code {
+    width: 100%;
+    max-width: 100%;
+    margin: 16px 0;
+}
+
+.consulted-code pre {
+    background: rgba(15, 15, 20, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(240, 240, 245, 0.95);
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Consulted image styles */
+.consulted-image {
+    text-align: center;
+    margin: 16px 0;
+    flex-shrink: 0;
+}
+
+.consulted-image img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(45, 45, 50, 0.3);
+}
+
+/* Consultation layout styles */
+.consultation-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-preview {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.image-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.image-info h5 {
+    color: rgba(200, 200, 200, 0.9);
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.image-info p {
+    color: rgba(200, 200, 200, 0.7);
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.consultation-result {
+    padding-top: 20px;
+}
+
+.consultation-result p {
+    color: rgba(200, 200, 200, 0.9);
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Cuando es solo el placeholder inicial */
+.consultation-result p:empty,
+.consultation-result p[data-placeholder="true"] {
+    text-align: center;
+    color: rgba(200, 200, 200, 0.6);
+}
+
+/* Notificación de contenido no disponible */
+.no-content-notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(35, 35, 40, 0.95);
+    border: 1px solid rgba(220, 220, 220, 0.2);
+    border-radius: 12px;
+    padding: 12px 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2147483647;
+    pointer-events: none;
+}
+
+.no-content-notification.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(200, 200, 200, 0.9);
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.notification-text {
+    color: rgba(200, 200, 200, 0.9);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Spinner de carga */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Estilos para mensaje de API key requerida */
+.api-key-required {
+    text-align: center;
+    padding: 30px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.api-key-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.api-key-required h3 {
+    color: rgba(96, 170, 255, 0.9);
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.api-key-required p {
+    color: rgba(220, 220, 220, 0.8);
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.api-key-steps, .api-key-benefits {
+    text-align: left;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(40, 40, 45, 0.5);
+    border-radius: 8px;
+    border-left: 4px solid rgba(96, 170, 255, 0.5);
+}
+
+.api-key-steps h4, .api-key-benefits h4 {
+    color: rgba(96, 170, 255, 0.9);
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.api-key-steps ol, .api-key-benefits ul {
+    margin: 0;
+    padding-left: 20px;
+    color: rgba(220, 220, 220, 0.8);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.api-key-steps li, .api-key-benefits li {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.api-key-steps a {
+    color: rgba(96, 170, 255, 1);
+    text-decoration: none;
+}
+
+.api-key-steps a:hover {
+    text-decoration: underline;
+}
+
+.open-settings-btn {
+    background: linear-gradient(135deg, rgba(96, 170, 255, 0.8), rgba(66, 133, 244, 0.8));
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.open-settings-btn:hover {
+    background: linear-gradient(135deg, rgba(96, 170, 255, 1), rgba(66, 133, 244, 1));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(96, 170, 255, 0.3);
+}
+
+
+/* Reforzar estilos de scrollbar para modales */
+.contextual-modal .modal-body,
+.contextual-modal .modal-body *,
+.contextual-modal .response-content,
+.contextual-modal .response-content *,
+.contextual-modal .consultation-result,
+.contextual-modal .consultation-result *,
+.contextual-modal .code-preview pre,
+.selection-modal-body,
+.selection-modal-body * {
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(100, 200, 255, 0.4) rgba(40, 40, 45, 0.5) !important;
+}
+
+/* Scrollbar Webkit (Chrome, Safari, Edge) */
+.contextual-modal .modal-body::-webkit-scrollbar,
+.contextual-modal .modal-body *::-webkit-scrollbar,
+.contextual-modal .response-content::-webkit-scrollbar,
+.contextual-modal .response-content *::-webkit-scrollbar,
+.contextual-modal .consultation-result::-webkit-scrollbar,
+.contextual-modal .consultation-result *::-webkit-scrollbar,
+.contextual-modal .code-preview pre::-webkit-scrollbar,
+.selection-modal-body::-webkit-scrollbar,
+.selection-modal-body *::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+}
+
+.contextual-modal .modal-body::-webkit-scrollbar-track,
+.contextual-modal .modal-body *::-webkit-scrollbar-track,
+.contextual-modal .response-content::-webkit-scrollbar-track,
+.contextual-modal .response-content *::-webkit-scrollbar-track,
+.contextual-modal .consultation-result::-webkit-scrollbar-track,
+.contextual-modal .consultation-result *::-webkit-scrollbar-track,
+.contextual-modal .code-preview pre::-webkit-scrollbar-track,
+.selection-modal-body::-webkit-scrollbar-track,
+.selection-modal-body *::-webkit-scrollbar-track {
+    background: rgba(40, 40, 45, 0.5) !important;
+    border-radius: 5px !important;
+}
+
+.contextual-modal .modal-body::-webkit-scrollbar-thumb,
+.contextual-modal .modal-body *::-webkit-scrollbar-thumb,
+.contextual-modal .response-content::-webkit-scrollbar-thumb,
+.contextual-modal .response-content *::-webkit-scrollbar-thumb,
+.contextual-modal .consultation-result::-webkit-scrollbar-thumb,
+.contextual-modal .consultation-result *::-webkit-scrollbar-thumb,
+.contextual-modal .code-preview pre::-webkit-scrollbar-thumb,
+.selection-modal-body::-webkit-scrollbar-thumb,
+.selection-modal-body *::-webkit-scrollbar-thumb {
+    background: rgba(100, 200, 255, 0.4) !important;
+    border-radius: 5px !important;
+}
+
+.contextual-modal .modal-body::-webkit-scrollbar-thumb:hover,
+.contextual-modal .modal-body *::-webkit-scrollbar-thumb:hover,
+.contextual-modal .response-content::-webkit-scrollbar-thumb:hover,
+.contextual-modal .response-content *::-webkit-scrollbar-thumb:hover,
+.contextual-modal .consultation-result::-webkit-scrollbar-thumb:hover,
+.contextual-modal .consultation-result *::-webkit-scrollbar-thumb:hover,
+.contextual-modal .code-preview pre::-webkit-scrollbar-thumb:hover,
+.selection-modal-body::-webkit-scrollbar-thumb:hover,
+.selection-modal-body *::-webkit-scrollbar-thumb:hover {
+    background: rgba(100, 200, 255, 0.6) !important;
+}
+
+/* Reforzar z-index para evitar conflictos */
+.contextual-modal {
+    z-index: 2147483647 !important;
+}
+
+.selection-modal {
+    z-index: 2147483645 !important;
+}
+
+/* Reforzar backgrounds y borders para consistencia */
+.contextual-modal .modal-content,
+.selection-modal-content {
+    background: linear-gradient(135deg, rgba(30, 30, 35, 0.95), rgba(40, 40, 45, 0.95)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 16px !important;
+    box-shadow: 
+        0 25px 80px rgba(0, 0, 0, 0.6),
+        inset 2px 2px 6px rgba(255, 255, 255, 0.03),
+        inset -2px -2px 6px rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+}
+
+/* Reforzar fuentes para todos los elementos del modal */
+.contextual-modal,
+.contextual-modal *,
+.selection-modal,
+.selection-modal * {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* Reforzar colores de texto */
+.contextual-modal .modal-body,
+.selection-modal-body {
+    color: rgba(220, 220, 220, 0.9) !important;
+}
+
+.contextual-modal .modal-header h2,
+.selection-modal-header h3 {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Reforzar estilos de inputs */
+.contextual-modal .query-input {
+    background: rgba(96, 170, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: rgba(240, 240, 240, 0.9) !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.contextual-modal .query-input:focus {
+    outline: none !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    background: rgba(96, 170, 255, 0.15) !important;
+}
+
+/* Reforzar botones */
+.contextual-modal .query-submit-btn,
+.contextual-modal .response-control-btn,
+.contextual-modal .query-btn {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    cursor: pointer !important;
+}
+
+/* Reforzar código preview */
+.contextual-modal .code-preview pre,
+.selection-modal .code-preview pre {
+    background: rgba(15, 15, 20, 0.8) !important;
+    border-radius: 8px !important;
+    padding: 16px !important;
+    font-family: 'Fira Code', 'Monaco', 'Consolas', 'Courier New', monospace !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: rgba(240, 240, 245, 0.95) !important;
+    overflow-x: auto !important;
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+}
+
+/* Reforzar overlay */
+.contextual-modal .modal-overlay,
+.selection-modal-overlay {
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Prevenir que estilos de la página afecten los modales */
+.contextual-modal *,
+.selection-modal * {
+    box-sizing: border-box !important;
+}
+
+/* Restaurar márgenes y paddings específicos del modal */
+.contextual-modal .modal-header,
+.selection-modal-header {
+    padding: 24px 28px 20px !important;
+}
+
+.contextual-modal .modal-body,
+.selection-modal-body {
+    padding: 24px 28px 28px !important;
+}
+
+.contextual-modal .response-content {
+    padding: 20px !important;
+}
+
+.contextual-modal .code-preview {
+    padding: 20px !important;
+    margin: 16px 0 !important;
+}
+
+/* Asegurar que el modal cubra toda la pantalla */
+.contextual-modal,
+.selection-modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+/* Reforzar menú contextual principal */
+.selection-context-menu {
+    position: fixed !important;
+    background: rgba(35, 35, 40, 0.95) !important;
+    border: 1px solid rgba(100, 200, 255, 0.3) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    padding: 8px !important;
+    z-index: 2147483647 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    box-sizing: border-box !important;
+}
+
+/* Reforzar opciones del menú contextual */
+.selection-context-menu .context-menu-option {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 8px 12px !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: rgba(220, 220, 220, 0.9) !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    width: 100% !important;
+    text-align: left !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+    min-width: 140px !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    box-sizing: border-box !important;
+}
+
+.selection-context-menu .context-menu-option:hover {
+    background: rgba(100, 200, 255, 0.15) !important;
+    color: rgba(255, 255, 255, 1) !important;
+    transform: translateX(2px) !important;
+}
+
+.selection-context-menu .context-menu-option:active {
+    background: rgba(100, 200, 255, 0.25) !important;
+    transform: translateX(2px) scale(0.98) !important;
+}
+
+/* Reforzar iconos de las opciones */
+.selection-context-menu .option-icon {
+    width: 16px !important;
+    height: 16px !important;
+    filter: brightness(0) saturate(100%) invert(87%) sepia(8%) saturate(1019%) hue-rotate(188deg) brightness(94%) contrast(89%) !important;
+    transition: filter 0.2s ease !important;
+    flex-shrink: 0 !important;
+}
+
+.selection-context-menu .context-menu-option:hover .option-icon {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(100%) saturate(600%) hue-rotate(180deg) brightness(120%) contrast(120%) !important;
+}
+
+/* Reforzar etiquetas de las opciones */
+.selection-context-menu .option-label {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    flex: 1 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* Reforzar notificaciones del sistema */
+.selection-notification {
+    position: fixed !important;
+    top: 20px !important;
+    right: 20px !important;
+    background: rgba(31, 41, 55, 0.9) !important;
+    color: rgba(156, 163, 175, 1) !important;
+    padding: 12px 20px !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(100, 200, 255, 0.3) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    z-index: 2147483646 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    max-width: 300px !important;
+    box-sizing: border-box !important;
+}
+
+/* Prevenir que estilos de la página afecten el menú contextual */
+.selection-context-menu,
+.selection-context-menu * {
+    box-sizing: border-box !important;
+}
+
+.selection-notification,
+.selection-notification * {
+    box-sizing: border-box !important;
+}
+
+/* Reforzar estados especiales del menú contextual */
+.selection-context-menu[data-content-type="code"] {
+    border-color: rgba(100, 200, 255, 0.4) !important;
+}
+
+.selection-context-menu[data-content-type="image"] {
+    border-color: rgba(168, 85, 247, 0.4) !important;
+}
+
+.selection-context-menu[data-content-type="text"] {
+    border-color: rgba(59, 130, 246, 0.4) !important;
+}
+/* Reforzar todos los elementos internos del modal de código */
+.contextual-modal .code-preview,
+.selection-modal .code-preview {
+    background: rgba(20, 20, 25, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    margin: 16px 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.contextual-modal .code-preview p,
+.selection-modal .code-preview p {
+    margin: 0 0 12px 0 !important;
+    color: rgba(240, 240, 245, 0.9) !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Reforzar área de consulta de imagen */
+.contextual-modal .image-consultation,
+.selection-modal .image-consultation {
+    text-align: center !important;
+}
+
+.contextual-modal .image-consultation img,
+.selection-modal .image-consultation img {
+    display: block !important;
+    margin: 0 auto 16px !important;
+    border: 1px solid rgba(100, 200, 255, 0.2) !important;
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+.contextual-modal .image-consultation p,
+.selection-modal .image-consultation p {
+    margin: 0 !important;
+    color: rgba(220, 220, 220, 0.9) !important;
+    font-size: 14px !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Reforzar área de respuesta */
+.contextual-modal .response-area {
+    background: rgba(20, 20, 25, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+}
+
+.contextual-modal .response-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 16px 20px !important;
+    background: rgba(30, 30, 35, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.contextual-modal .response-title {
+    margin: 0 !important;
+    color: rgba(240, 240, 240, 0.9) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Reforzar botones de control de respuesta */
+.contextual-modal .response-controls {
+    display: flex !important;
+    gap: 8px !important;
+}
+
+.contextual-modal .response-control-btn {
+    background: linear-gradient(135deg, rgba(96, 170, 255, 0.15) 0%, rgba(60, 130, 255, 0.2) 100%) !important;
+    border: 1px solid rgba(100, 200, 255, 0.3) !important;
+    border-radius: 6px !important;
+    padding: 6px !important;
+    color: rgba(100, 200, 255, 0.8) !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 32px !important;
+    height: 32px !important;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.1), inset -1px -1px 2px rgba(255, 255, 255, 0.02), 0 1px 3px rgba(96, 170, 255, 0.1) !important;
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+}
+
+.contextual-modal .response-control-btn:hover {
+    background: linear-gradient(135deg, rgba(110, 180, 255, 0.2) 0%, rgba(70, 140, 255, 0.25) 100%) !important;
+    color: rgba(100, 200, 255, 1) !important;
+    box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.15), inset -2px -2px 3px rgba(255, 255, 255, 0.04), 0 2px 4px rgba(96, 170, 255, 0.15) !important;
+}
+
+/* Reforzar consultas predefinidas */
+.contextual-modal .preset-queries {
+    margin-bottom: 24px !important;
+}
+
+.contextual-modal .preset-queries h3 {
+    margin: 0 0 16px 0 !important;
+    color: rgba(200, 200, 200, 0.8) !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.contextual-modal .query-list {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+    gap: 10px !important;
+}
+
+.contextual-modal .query-btn {
+    background: rgba(45, 45, 50, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 8px !important;
+    padding: 10px 14px !important;
+    color: rgba(200, 200, 200, 0.9) !important;
+    font-size: 13px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    text-align: left !important;
+    line-height: 1.4 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+.contextual-modal .query-btn:hover {
+    background: rgba(55, 55, 60, 0.8) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: rgba(240, 240, 240, 1) !important;
+}
+
+/* Reforzar botón de envío de consulta */
+.contextual-modal .query-submit-btn {
+    background: linear-gradient(135deg, rgba(96, 170, 255, 0.2) 0%, rgba(60, 130, 255, 0.3) 100%) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 12px 20px !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    white-space: nowrap !important;
+    box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.15), inset -2px -2px 6px rgba(255, 255, 255, 0.05), 0 2px 8px rgba(96, 170, 255, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.contextual-modal .query-submit-btn:hover {
+    background: linear-gradient(135deg, rgba(110, 180, 255, 0.4) 0%, rgba(70, 140, 255, 0.5) 100%) !important;
+    color: rgba(255, 255, 255, 1) !important;
+    box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.2), inset -3px -3px 8px rgba(255, 255, 255, 0.08), 0 4px 12px rgba(96, 170, 255, 0.3) !important;
+}

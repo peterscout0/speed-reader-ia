@@ -1,0 +1,1315 @@
+{
+  "extensionName": {
+    "message": "Speed Reader IA",
+    "description": "Nombre de la extensión"
+  },
+  "extensionDescription": {
+    "message": "Extensión de texto a voz con IA y herramientas contextuales de lectura",
+    "description": "Descripción de la extensión"
+  },
+  "optionsSubtitle": {
+    "message": "Gestión de historial y configuración avanzada",
+    "description": "Subtítulo para la página de opciones"
+  },
+  "read": {
+    "message": "Leer",
+    "description": "Texto del botón leer"
+  },
+  "describe": {
+    "message": "Describir",
+    "description": "Texto del botón describir"
+  },
+  "copy": {
+    "message": "Copiar",
+    "description": "Texto del botón copiar"
+  },
+  "play": {
+    "message": "Reproducir",
+    "description": "Texto del botón reproducir"
+  },
+  "pause": {
+    "message": "Pausar",
+    "description": "Texto del botón pausar"
+  },
+  "stop": {
+    "message": "Detener",
+    "description": "Texto del botón detener"
+  },
+  "next": {
+    "message": "Siguiente",
+    "description": "Texto del botón siguiente"
+  },
+  "previous": {
+    "message": "Anterior",
+    "description": "Texto del botón anterior"
+  },
+  "speed": {
+    "message": "Velocidad",
+    "description": "Etiqueta de control de velocidad"
+  },
+  "volume": {
+    "message": "Volumen",
+    "description": "Etiqueta de control de volumen"
+  },
+  "settings": {
+    "message": "Configuración",
+    "description": "Título de la página de configuración"
+  },
+  "configuration": {
+    "message": "Configuración",
+    "description": "Título de la sección de configuración"
+  },
+  "activate": {
+    "message": "Activar",
+    "description": "Texto del botón activar"
+  },
+  "deactivate": {
+    "message": "Desactivar",
+    "description": "Texto del botón desactivar"
+  },
+  "enabled": {
+    "message": "Habilitado",
+    "description": "Texto de estado habilitado"
+  },
+  "disabled": {
+    "message": "Deshabilitado",
+    "description": "Texto de estado deshabilitado"
+  },
+  "globalPlayer": {
+    "message": "Reproductor Global",
+    "description": "Título del reproductor de audio global"
+  },
+  "contextualIcons": {
+    "message": "Iconos Contextuales",
+    "description": "Configuración de iconos contextuales"
+  },
+  "voice": {
+    "message": "Voz",
+    "description": "Etiqueta de selección de voz"
+  },
+  "pitch": {
+    "message": "Tono",
+    "description": "Etiqueta de control de tono"
+  },
+  "selectVoice": {
+    "message": "Seleccionar Voz",
+    "description": "Placeholder de selección de voz"
+  },
+  "readerMode": {
+    "message": "Modo Lectura",
+    "description": "Título del modo lectura"
+  },
+  "focusMode": {
+    "message": "Modo Enfoque",
+    "description": "Título del modo enfoque"
+  },
+  "exitReaderMode": {
+    "message": "Salir del Modo Lectura",
+    "description": "Botón salir del modo lectura"
+  },
+  "readSelected": {
+    "message": "Leer Texto Seleccionado",
+    "description": "Tooltip leer texto seleccionado"
+  },
+  "describeImage": {
+    "message": "Describir Imagen",
+    "description": "Tooltip describir imagen"
+  },
+  "copyText": {
+    "message": "Copiar Texto",
+    "description": "Tooltip copiar texto"
+  },
+  "analyzeCode": {
+    "message": "Analizar Código",
+    "description": "Tooltip analizar código"
+  },
+  "extensionInstalled": {
+    "message": "Speed-Reader IA instalado",
+    "description": "Mensaje de extensión instalada"
+  },
+  "extensionInitialized": {
+    "message": "Extensión inicializada con configuración por defecto",
+    "description": "Mensaje de extensión inicializada"
+  },
+  "extensionUpdated": {
+    "message": "Extensión actualizada exitosamente",
+    "description": "Mensaje de extensión actualizada"
+  },
+  "settingsUpdated": {
+    "message": "Configuración actualizada y distribuida",
+    "description": "Mensaje de configuración actualizada"
+  },
+  "extensionActivated": {
+    "message": "activada",
+    "description": "Estado de extensión activada"
+  },
+  "extensionDeactivated": {
+    "message": "desactivada",
+    "description": "Estado de extensión desactivada"
+  },
+  "errorLoadingSettings": {
+    "message": "Error cargando configuración",
+    "description": "Mensaje de error cargando configuración"
+  },
+  "errorUpdatingSettings": {
+    "message": "Error actualizando configuración",
+    "description": "Mensaje de error actualizando configuración"
+  },
+  "errorTogglingExtension": {
+    "message": "Error alternando extensión",
+    "description": "Mensaje de error alternando extensión"
+  },
+  "searchPlaceholder": {
+    "message": "Buscar o preguntar cualquier cosa...",
+    "description": "Placeholder del campo de búsqueda"
+  },
+  "queryPlaceholder": {
+    "message": "Preguntar sobre este contenido...",
+    "description": "Placeholder del campo de consulta"
+  },
+  "geminiApiKey": {
+    "message": "Clave API de Gemini",
+    "description": "Etiqueta de configuración de clave API de Gemini"
+  },
+  "apiKeyPlaceholder": {
+    "message": "Ingresa tu clave API de Gemini",
+    "description": "Placeholder del campo de clave API"
+  },
+  "processing": {
+    "message": "Procesando...",
+    "description": "Mensaje de estado procesando"
+  },
+  "analyzing": {
+    "message": "Analizando...",
+    "description": "Mensaje de estado analizando"
+  },
+  "consultationHistory": {
+    "message": "Historial de Consultas",
+    "description": "Título del historial de consultas"
+  },
+  "clearHistory": {
+    "message": "Limpiar Historial",
+    "description": "Botón limpiar historial"
+  },
+  "noHistory": {
+    "message": "No hay historial de consultas",
+    "description": "Mensaje sin historial"
+  },
+  "toggleExtension": {
+    "message": "Alternar Extensión",
+    "description": "Comando alternar extensión"
+  },
+  "toggleReaderMode": {
+    "message": "Alternar Modo Lectura",
+    "description": "Comando alternar modo lectura"
+  },
+  "imageInQuery": {
+    "message": "Imagen en consulta",
+    "description": "Estado de consulta de imagen"
+  },
+  "imageBeingAnalyzedByAI": {
+    "message": "Esta imagen está siendo analizada por IA",
+    "description": "Mensaje de estado de análisis de imagen"
+  },
+  "writeQueryOrSelectPredefinedForImage": {
+    "message": "Escribe una consulta o selecciona una opción predefinida para analizar la imagen",
+    "description": "Instrucción de análisis de imagen"
+  },
+
+  "consultationCanceled": {
+    "message": "Consulta cancelada",
+    "description": "Mensaje consulta cancelada"
+  },
+  "selectedImageConsultation": {
+    "message": "Consulta de imagen seleccionada",
+    "description": "Título consulta imagen seleccionada"
+  },
+  "consultationInProgressMessage": {
+    "message": "Por favor espera, consulta en progreso...",
+    "description": "Mensaje de notificación consulta en progreso"
+  },
+  "cannotCloseWhileProcessing": {
+    "message": "No se puede cerrar mientras se procesa la consulta",
+    "description": "Tooltip para botón cerrar deshabilitado durante procesamiento"
+  },
+  "toggleAudioPlayer": {
+    "message": "Alternar Reproductor de Audio",
+    "description": "Comando alternar reproductor de audio"
+  },
+  "aiIntegration": {
+    "message": "Integración con IA",
+    "description": "Título de la sección de integración con IA"
+  },
+  "apiKeyDescription": {
+    "message": "Ingresa tu API key personal de Google AI Studio para usar las funciones de consulta con IA.",
+    "description": "Texto de descripción de API key"
+  },
+  "getFreeApiKey": {
+    "message": "Obtener API key gratuita →",
+    "description": "Texto del enlace para obtener API key gratuita"
+  },
+  "showHideApiKey": {
+    "message": "Mostrar/Ocultar API key",
+    "description": "Tooltip del botón mostrar/ocultar API key"
+  },
+  "testConnection": {
+    "message": "Probar conexión",
+    "description": "Tooltip del botón probar conexión"
+  },
+  "howToGetApiKey": {
+    "message": "Cómo obtener tu API key gratuita",
+    "description": "Título de la sección cómo obtener API key"
+  },
+  "goToGoogleAI": {
+    "message": "Ve a",
+    "description": "Paso ir a Google AI Studio"
+  },
+  "signInGoogle": {
+    "message": "Inicia sesión con tu cuenta de Google",
+    "description": "Paso iniciar sesión"
+  },
+  "clickCreateApiKey": {
+    "message": "Haz clic en \"Create API key\"",
+    "description": "Paso crear API key"
+  },
+  "copyPasteKey": {
+    "message": "Copia la clave y pégala aquí",
+    "description": "Paso copiar y pegar clave"
+  },
+  "readyAiAccess": {
+    "message": "¡Listo! Tendrás acceso a consultas con IA",
+    "description": "Paso listo acceso IA"
+  },
+  "note": {
+    "message": "Nota",
+    "description": "Etiqueta de nota"
+  },
+  "apiKeySafelyStored": {
+    "message": "Tu API key se guarda de forma segura solo en tu navegador.",
+    "description": "Nota de seguridad de API key"
+  },
+  "saveSettings": {
+    "message": "Guardar Configuración",
+    "description": "Botón guardar configuración"
+  },
+  "errorStartingVoiceTest": {
+    "message": "Error iniciando prueba de voz",
+    "description": "Mensaje de error para fallo de prueba de voz"
+  },
+  "testVoice": {
+    "message": "Probar Voz",
+    "description": "Texto del botón probar voz"
+  },
+  "selectConsultationDesc": {
+    "message": "Selecciona una consulta del historial para ver los detalles completos de la conversación con Gemini IA.",
+    "description": "Texto descriptivo para selección de consulta"
+  },
+  "imagesAnalyzed": {
+    "message": "Imágenes Analizadas",
+    "description": "Etiqueta estadística para imágenes analizadas"
+  },
+  "codeReviewed": {
+    "message": "Código Revisado",
+    "description": "Etiqueta estadística para código revisado"
+  },
+  "deleteConsultation": {
+    "message": "Eliminar Consulta",
+    "description": "Opción del menú contextual para eliminar consulta"
+  },
+  "exportConsultation": {
+    "message": "Exportar Consulta",
+    "description": "Opción del menú contextual para exportar consulta"
+  },
+  "historyConfiguration": {
+    "message": "Configuración de Historial",
+    "description": "Título de sección de configuración de historial"
+  },
+  "maxHistoryItems": {
+    "message": "Máximo de elementos en historial:",
+    "description": "Etiqueta para configuración de elementos máximos en historial"
+  },
+  "maxHistoryHelp": {
+    "message": "Número máximo de consultas a mantener en el historial (10-1000)",
+    "description": "Texto de ayuda para configuración de elementos máximos"
+  },
+  "autoCleanup": {
+    "message": "Auto-limpieza del historial:",
+    "description": "Etiqueta para configuración de auto-limpieza"
+  },
+  "never": {
+    "message": "Nunca",
+    "description": "Opción para nunca limpiar historial"
+  },
+  "after7Days": {
+    "message": "Después de 7 días",
+    "description": "Opción para limpiar después de 7 días"
+  },
+  "after30Days": {
+    "message": "Después de 30 días",
+    "description": "Opción para limpiar después de 30 días"
+  },
+  "after90Days": {
+    "message": "Después de 90 días",
+    "description": "Opción para limpiar después de 90 días"
+  },
+  "autoCleanupHelp": {
+    "message": "Eliminar automáticamente consultas antiguas",
+    "description": "Texto de ayuda para configuración de auto-limpieza"
+  },
+  "saveImageAnalysis": {
+    "message": "Guardar análisis de imágenes en historial",
+    "description": "Etiqueta checkbox para guardar análisis de imágenes"
+  },
+  "saveCodeAnalysis": {
+    "message": "Guardar análisis de código en historial",
+    "description": "Etiqueta checkbox para guardar análisis de código"
+  },
+  "interfaceLanguage": {
+    "message": "Idioma de la interfaz:",
+    "description": "Etiqueta para configuración de idioma de interfaz"
+  },
+  "spanish": {
+    "message": "Español",
+    "description": "Opción de idioma español"
+  },
+  "english": {
+    "message": "Inglés",
+    "description": "Opción de idioma inglés"
+  },
+  "french": {
+    "message": "Francés",
+    "description": "Opción de idioma francés"
+  },
+  "german": {
+    "message": "Alemán",
+    "description": "Opción de idioma alemán"
+  },
+  "portuguese": {
+    "message": "Portugués",
+    "description": "Opción de idioma portugués"
+  },
+  "italian": {
+    "message": "Italiano",
+    "description": "Opción de idioma italiano"
+  },
+  "interfaceLanguageHelp": {
+    "message": "Cambiar idioma de la interfaz (las consultas mantienen su idioma original)",
+    "description": "Texto de ayuda para configuración de idioma"
+  },
+  "saveConfiguration": {
+    "message": "Guardar Configuración",
+    "description": "Botón para guardar configuración"
+  },
+  "exportData": {
+    "message": "Exportar Datos",
+    "description": "Título de sección de exportación"
+  },
+  "exportDesc": {
+    "message": "Exporta tu historial de consultas para respaldo o análisis:",
+    "description": "Descripción de sección de exportación"
+  },
+  "exportAsJSON": {
+    "message": "Exportar como JSON",
+    "description": "Botón para exportar en formato JSON"
+  },
+  "exportAsCSV": {
+    "message": "Exportar como CSV",
+    "description": "Botón para exportar en formato CSV"
+  },
+  "importData": {
+    "message": "Importar Datos",
+    "description": "Título de sección de importación y texto de botón"
+  },
+  "importDesc": {
+    "message": "Importa un historial previamente exportado:",
+    "description": "Descripción de sección de importación"
+  },
+  "selectFile": {
+    "message": "Seleccionar Archivo",
+    "description": "Botón para seleccionar archivo de importación"
+  },
+  "audioControlTooltip": {
+    "message": "Clic: Reproducir | Doble clic: Reiniciar",
+    "description": "Tooltip para botón de control de audio"
+  },
+  "describeImageWithVoice": {
+    "message": "Describir imagen con voz",
+    "description": "Tooltip para botón de audio de imagen"
+  },
+  "describeCodeWithVoice": {
+    "message": "Describir código con voz",
+    "description": "Tooltip para botón de audio de código"
+  },
+  "couldNotPlayImageDescription": {
+    "message": "No se pudo reproducir la descripción de la imagen",
+    "description": "Mensaje de error para fallo de audio de imagen"
+  },
+  "couldNotPlayCodeDescription": {
+    "message": "No se pudo reproducir la descripción del código",
+    "description": "Mensaje de error para fallo de audio de código"
+  },
+  "couldNotGenerateImageDescription": {
+    "message": "No se pudo generar la descripción de la imagen",
+    "description": "Mensaje de error para fallo de generación de descripción de imagen"
+  },
+  "couldNotGenerateAudioDescription": {
+    "message": "No se pudo generar la audio-descripción",
+    "description": "Mensaje de error para fallo de generación de audio-descripción"
+  },
+  "couldNotGenerateCodeSummary": {
+    "message": "No se pudo generar el resumen del código",
+    "description": "Mensaje de error para fallo de generación de resumen de código"
+  },
+  "codeCopiedToClipboard": {
+    "message": "Código copiado al portapapeles",
+    "description": "Mensaje de éxito para copia de código"
+  },
+  "couldNotCopyCode": {
+    "message": "No se pudo copiar el código",
+    "description": "Mensaje de error para fallo de copia de código"
+  },
+  "queryCopiedToClipboard": {
+    "message": "Consulta copiada al portapapeles",
+    "description": "Mensaje de éxito para copia de consulta"
+  },
+  "noQueryToCopy": {
+    "message": "No hay consulta para copiar",
+    "description": "Mensaje informativo cuando no hay consulta disponible para copiar"
+  },
+  "contentCopiedToClipboard": {
+    "message": "Contenido copiado al portapapeles",
+    "description": "Mensaje de éxito para copia de contenido"
+  },
+  "noContentToCopy": {
+    "message": "No hay contenido para copiar",
+    "description": "Mensaje informativo cuando no hay contenido disponible para copiar"
+  },
+  "noContentToPlay": {
+    "message": "No hay contenido para reproducir",
+    "description": "Mensaje informativo cuando no hay contenido disponible para reproducir"
+  },
+  "settingsReloading": {
+    "message": "Configuración guardada - Recargando página para aplicar cambios...",
+    "description": "Mensaje cuando se guardan las configuraciones y se recargará la página"
+  },
+  "settingsError": {
+    "message": "Error al guardar la configuración",
+    "description": "Mensaje de error cuando falla el guardado de configuración"
+  },
+  "deleteConfirm": {
+    "message": "¿Estás seguro de que quieres eliminar esto?",
+    "description": "Mensaje de confirmación para eliminación"
+  },
+  "historyDeleted": {
+    "message": "eliminado",
+    "description": "Parte del mensaje de éxito para eliminación de historial"
+  },
+  "historyDeleteError": {
+    "message": "Error al eliminar historial de",
+    "description": "Mensaje de error para fallo de eliminación de historial"
+  },
+  "confirmDeleteAll": {
+    "message": "¿Estás seguro de que quieres eliminar TODO el historial? Esta acción no se puede deshacer.",
+    "description": "Mensaje de confirmación para eliminar todo el historial"
+  },
+  "historyCleared": {
+    "message": "Todo el historial ha sido eliminado",
+    "description": "Mensaje de éxito cuando se borra todo el historial"
+  },
+  "deleteHistoryError": {
+    "message": "Error al eliminar el historial",
+    "description": "Mensaje de error para fallo de eliminación de historial"
+  },
+  "exportImport": {
+    "message": "Exportar/Importar",
+    "description": "Título de la pestaña Exportar/Importar"
+  },
+  "noImageConsultations": {
+    "message": "No hay consultas de imágenes",
+    "description": "Mensaje cuando no existen consultas de imágenes"
+  },
+  "noCodeConsultations": {
+    "message": "No hay consultas de código",
+    "description": "Mensaje cuando no existen consultas de código"
+  },
+  "lessThanHour": {
+    "message": "Hace menos de 1 hora",
+    "description": "Tiempo relativo para menos de una hora"
+  },
+  "hour": {
+    "message": "hora",
+    "description": "Forma singular de hora"
+  },
+  "hours": {
+    "message": "horas",
+    "description": "Forma plural de horas"
+  },
+  "day": {
+    "message": "día",
+    "description": "Forma singular de día"
+  },
+  "days": {
+    "message": "días",
+    "description": "Forma plural de días"
+  },
+  "timeAgoHours": {
+    "message": "Hace {0} {1}",
+    "description": "Formato de tiempo para horas, {0} = número, {1} = hora/horas"
+  },
+  "timeAgoDays": {
+    "message": "Hace {0} {1}",
+    "description": "Formato de tiempo para días, {0} = número, {1} = día/días"
+  },
+  "itemDeleted": {
+    "message": "Elemento eliminado",
+    "description": "Mensaje de éxito cuando se elimina un elemento"
+  },
+  "itemDeleteError": {
+    "message": "Error al eliminar elemento",
+    "description": "Mensaje de error cuando falla la eliminación de elemento"
+  },
+  "noHistoryToExport": {
+    "message": "No hay historial para exportar de",
+    "description": "Mensaje de error cuando no existe historial para exportar"
+  },
+  "historyExported": {
+    "message": "exportado",
+    "description": "Parte del mensaje de éxito cuando se exporta historial"
+  },
+  "exportError": {
+    "message": "Error de exportación",
+    "description": "Mensaje de error para fallos de exportación"
+  },
+  "initializingReaderMode": {
+    "message": "Inicializando modo lectura... (sin activar por defecto)"
+  },
+  "keyboardShortcutDetected": {
+    "message": "Atajo de teclado detectado: Ctrl+Shift+R"
+  },
+  "keyboardShortcutConfigured": {
+    "message": "Atajo de teclado configurado: Ctrl+Shift+R para alternar modo lectura"
+  },
+  "readerModeAttempting": {
+    "message": "Intentando activar modo lectura..."
+  },
+  "readerModeCurrentState": {
+    "message": "Estado actual isActive:"
+  },
+  "readerModeCurrentUrl": {
+    "message": "URL actual:"
+  },
+  "readerModeAlreadyActive": {
+    "message": "Ya está activo, saltando activación"
+  },
+  "readerModeContentExtracted": {
+    "message": "Contenido extraído:"
+  },
+  "readerModeCreatingView": {
+    "message": "Contenido extraído, creando vista..."
+  },
+  "readerModeActivated": {
+    "message": "Modo lectura activado correctamente"
+  },
+  "readerModeDeactivating": {
+    "message": "Intentando desactivar modo lectura..."
+  },
+  "loadingConfiguration": {
+    "message": "Cargando configuración..."
+  },
+  "configurationLoaded": {
+    "message": "Configuración cargada:"
+  },
+  "errorLoadingConfiguration": {
+    "message": "Error cargando configuración:"
+  },
+  "initializingSelectionSystem": {
+    "message": "Iniciando sistema de selección contextual..."
+  },
+  "currentConfiguration": {
+    "message": "Configuración actual:"
+  },
+  "selectionSystemExists": {
+    "message": "Sistema de selección ya existe, destruyendo primero..."
+  },
+  "selectionContextualNotDefined": {
+    "message": "SelectionContextual no está definido"
+  },
+  "retryingSelectionInitialization": {
+    "message": "Reintentando inicialización del sistema de selección..."
+  },
+  "selectionSystemInitialized": {
+    "message": "Sistema de selección contextual inicializado correctamente"
+  },
+  "instanceCreated": {
+    "message": "Instancia creada:"
+  },
+  "errorInitializingSelection": {
+    "message": "Error inicializando sistema de selección:"
+  },
+  "audioPlayerInitialized": {
+    "message": "Reproductor de audio inicializado"
+  },
+  "errorInitializingPlayer": {
+    "message": "Error inicializando reproductor:"
+  },
+  "retryingPlayerInitialization": {
+    "message": "Reintentando inicialización del reproductor..."
+  },
+  "startingContextualSelection": {
+    "message": "Iniciando Sistema de Selección Contextual"
+  },
+  "startingReadingSystem": {
+    "message": "Iniciando sistema de lectura:"
+  },
+  "selectionWithImagesDeleted": {
+    "message": "¡SELECCIÓN CON IMÁGENES ELIMINADA!"
+  },
+  "pdfDetectedInUrl": {
+    "message": "PDF detectado en URL"
+  },
+  "pdfDetectedByMime": {
+    "message": "PDF detectado por MIME type"
+  },
+  "chromePdfViewerDetected": {
+    "message": "Chrome PDF viewer detectado"
+  },
+  "alternativeSpanishVoiceSelected": {
+    "message": "Voz alternativa en español seleccionada:"
+  },
+  "pdfJsViewerDetected": {
+    "message": "PDF.js viewer detectado"
+  },
+  "embeddedPdfDetected": {
+    "message": "PDF embebido detectado"
+  },
+  "githubPdfDetected": {
+    "message": "GitHub PDF detectado"
+  },
+  "blobPdfDetected": {
+    "message": "Blob PDF detectado"
+  },
+  "pluginPdfDetected": {
+    "message": "Plugin PDF detectado"
+  },
+  "pdfDetectedByCheck": {
+    "message": "PDF detectado por check:"
+  },
+  "chromeNativeViewerDetected": {
+    "message": "Visor nativo de Chrome detectado - Extensiones limitadas"
+  },
+  "pdfDetectedSecondVerification": {
+    "message": "PDF detectado en segunda verificación!"
+  },
+  "pdfDetectedFunctionsAvailable": {
+    "message": "PDF detectado - Funciones de lectura ahora disponibles"
+  },
+  "pdfDetectedFunctionsReady": {
+    "message": "PDF detectado - Funciones de lectura disponibles"
+  },
+  "initializingGlobalAudioPlayer": {
+    "message": "Inicializando reproductor de audio global..."
+  },
+  "viewportContainmentApplied": {
+    "message": "Viewport containment aplicado"
+  },
+  "handlerConfigured": {
+    "message": "Handler configurado"
+  },
+  "notSpaBasicDetection": {
+    "message": "No es SPA, usando detección básica de cambios de URL..."
+  },
+  "spaDetectedConfiguring": {
+    "message": "SPA detectada: {0} - Configurando sistema simplificado..."
+  },
+  "manualRefreshSystemConfigured": {
+    "message": "Sistema de refresh manual configurado correctamente"
+  },
+  "hybridSystemInitialized": {
+    "message": "Sistema híbrido inicializado:"
+  },
+  "angularDocsContainerFound": {
+    "message": "Angular Docs container encontrado:"
+  },
+  "containerFound": {
+    "message": "Contenedor encontrado:"
+  },
+  "searchingContainerByContent": {
+    "message": "Buscando contenedor por contenido..."
+  },
+  "significantChangeDetectedMainContainer": {
+    "message": "Cambio significativo detectado en contenedor principal"
+  },
+  "mainContainerDetected": {
+    "message": "Contenedor principal detectado:"
+  },
+  "configuringManualControls": {
+    "message": "Configurando controles manuales..."
+  },
+  "manualContentRefreshStarted": {
+    "message": "Refresh manual del contenido iniciado..."
+  },
+  "configuringNavigationInterception": {
+    "message": "Configurando interceptación de navegación..."
+  },
+  "navigationPushState": {
+    "message": "Navigation: pushState ->"
+  },
+  "pdfNativeViewerMessage": {
+    "message": "Este PDF usa el visor nativo de Chrome donde las extensiones no funcionan correctamente.\n\nPara que la extensión funcione correctamente:"
+  },
+  "downloadAndOpenPdf": {
+    "message": "Descarga el PDF y ábrelo directamente en una nueva pestaña"
+  },
+  "usePdfJsViewer": {
+    "message": "Usa una extensión de visor PDF.js"
+  },
+  "openInExternalReader": {
+    "message": "Abrir en un lector de PDF externo"
+  },
+  "pdfRedirectConfirm": {
+    "message": "¿Quieres abrirlo en PDF.js para usar todas las funciones de lectura?\n\n(Se abrirá en una nueva pestaña con mejor compatibilidad)"
+  },
+  "pdfOpenedInCompatibleViewer": {
+    "message": "PDF abierto en visor compatible"
+  },
+  "limitedFunctionsNativeViewer": {
+    "message": "Funciones limitadas en visor nativo"
+  },
+  "pdfModeActivatedManually": {
+    "message": "Modo PDF activado manualmente"
+  },
+  "waitingForImageToLoad": {
+    "message": "Esperando a que la imagen se cargue..."
+  },
+  "sendToGlobalPlayer": {
+    "message": "Enviar al reproductor global"
+  },
+  "preparingCodeAnalysis": {
+    "message": "Preparando análisis de código con IA..."
+  },
+  "preparingImageAnalysis": {
+    "message": "Preparando análisis de imagen con IA..."
+  },
+  "codeAnalysisTitle": {
+    "message": "Análisis de código seleccionado"
+  },
+  "imageAnalysisTitle": {
+    "message": "Análisis de imagen con IA"
+  },
+  "codeAnalysisByGemini": {
+    "message": "Análisis de Código por Gemini AI"
+  },
+  "imageAnalysisByGemini": {
+    "message": "Análisis de Imagen por Gemini AI"
+  },
+  "codeAnalysisError": {
+    "message": "Error de Análisis de Código"
+  },
+  "imageAnalysisError": {
+    "message": "Error de Análisis de Imagen"
+  },
+  "globalPlayerError": {
+    "message": "Error: No se pudo inicializar el reproductor global"
+  },
+  "globalPlayerNotAvailable": {
+    "message": "Reproductor global no disponible para PDF"
+  },
+  "noConsultationsFor": {
+    "message": "No hay consultas de"
+  },
+  "images": {
+    "message": "imágenes"
+  },
+  "code": {
+    "message": "código"
+  },
+  "text": {
+    "message": "texto"
+  },
+  "image": {
+    "message": "Imagen"
+  },
+  "imageConsultation": {
+    "message": "Análisis de Imagen"
+  },
+  "codeConsultation": {
+    "message": "Análisis de Código"
+  },
+  "textConsultation": {
+    "message": "Consulta de Texto"
+  },
+  "voiceConfigSaved": {
+    "message": "Configuración de voz guardada"
+  },
+  "newVoiceWillApply": {
+    "message": "La nueva voz se aplicará al reproducir"
+  },
+  "audioPlayerReady": {
+    "message": "Reproductor de audio listo. Esta página no contiene texto detectable para reproducir."
+  },
+  "restartFromBeginning": {
+    "message": "Reiniciar desde el inicio"
+  },
+  "restartBtn": {
+    "message": "Reiniciar"
+  },
+  "previousParagraph": {
+    "message": "Párrafo anterior"
+  },
+  "previousBtn": {
+    "message": "Anterior"
+  },
+  "playPause": {
+    "message": "Reproducir/Pausar"
+  },
+  "playBtn": {
+    "message": "Reproducir"
+  },
+  "nextParagraph": {
+    "message": "Párrafo siguiente"
+  },
+  "nextBtn": {
+    "message": "Siguiente"
+  },
+  "errorLoadingConfig": {
+    "message": "Error cargando configuración"
+  },
+  "errorSavingConfig": {
+    "message": "Error guardando configuración"
+  },
+  "errorSendingConfig": {
+    "message": "Error enviando configuración"
+  },
+  "queriesPerformed": {
+    "message": "Consultas realizadas (estimado)"
+  },
+  "queries": {
+    "message": "consultas"
+  },
+  "today": {
+    "message": "hoy"
+  },
+  "usageNote": {
+    "message": "Solo cuenta consultas de esta extensión. Límites reales pueden variar."
+  },
+  "updatingContent": {
+    "message": "Actualizando contenido..."
+  },
+  "contentUpdated": {
+    "message": "Contenido actualizado"
+  },
+  "restartedFromBeginning": {
+    "message": "Se reinició desde el inicio"
+  },
+  "contentUpdatedRestarted": {
+    "message": "Contenido actualizado - Reiniciado desde el inicio ({0} elementos)"
+  },
+  "readyToPlayParagraph": {
+    "message": "Listo para reproducir párrafo {0}"
+  },
+  "pausedAtParagraph": {
+    "message": "Pausado en párrafo {0}"
+  },
+  "restartedReadyToPlay": {
+    "message": "Reiniciado - Listo para reproducir desde el inicio"
+  },
+  "minimizePlayer": {
+    "message": "Minimizar reproductor"
+  },
+  "expandPlayer": {
+    "message": "Expandir reproductor"
+  },
+  "settingsTooltip": {
+    "message": "Configuración"
+  },
+  "configurationAlt": {
+    "message": "Configuración"
+  },
+  "contentUpdatedParagraphs": {
+    "message": "Contenido actualizado - {0} párrafos"
+  },
+  "contentUpdatedParagraphsAvailable": {
+    "message": "Contenido actualizado - {0} párrafos disponibles"
+  },
+  "paragraphs": {
+    "message": "párrafos"
+  },
+  "readyToPlayParagraphFromSelection": {
+    "message": "Listo para párrafo {0} (desde selección)"
+  },
+  "playbackPaused": {
+    "message": "Reproducción pausada"
+  },
+  "continuingPlayback": {
+    "message": "Continuando reproducción..."
+  },
+  "contentUpdatedNotification": {
+    "message": "📝 Contenido actualizado: {0} párrafos detectados"
+  },
+  "contentUpdatedLog": {
+    "message": "📝 Contenido actualizado: {0} → {1} párrafos"
+  },
+  "elementsFound": {
+    "message": "📊 Elementos encontrados: {0}"
+  },
+  "firstElementsFoundAngular": {
+    "message": "🅰️ Primeros elementos encontrados en Angular docs:"
+  },
+  "contentUpdatedCount": {
+    "message": "Contenido actualizado<br><span style=\"font-size: 11px; opacity: 0.7; font-family: inherit !important;\">{0} → {1} párrafos</span>"
+  },
+  "voiceConfiguration": {
+    "message": "Configuración de Voz"
+  },
+  "voiceLabel": {
+    "message": "Voz:"
+  },
+  "pitchLabel": {
+    "message": "Tono:"
+  },
+  "volumeLabel": {
+    "message": "Volumen:"
+  },
+  "testVoiceButton": {
+    "message": "Probar Voz"
+  },
+  "contentDetected": {
+    "message": "Contenido detectado - {0} párrafos disponibles"
+  },
+  "pausedAtParagraphNumber": {
+    "message": "Pausado en párrafo {0}"
+  },
+  "readyToPlayParagraphNumber": {
+    "message": "Listo para reproducir párrafo {0}"
+  },
+  "restartedParagraphCount": {
+    "message": "Reiniciado - Párrafo 1 de {0}"
+  },
+  "noContentToRestart": {
+    "message": "No hay contenido para reiniciar"
+  },
+  "readingCompleted": {
+    "message": "Lectura completada 🎉"
+  },
+  "playing": {
+    "message": "Reproduciendo..."
+  },
+  "playButton": {
+    "message": "Reproducir"
+  },
+  "pauseButton": {
+    "message": "Pausar"
+  },
+  "nextButton": {
+    "message": "Siguiente"
+  },
+  "noContentToPlayGlobal": {
+    "message": "No hay contenido para reproducir"
+  },
+  "audioPlaybackError": {
+    "message": "Error al reproducir audio"
+  },
+  "voiceTestText": {
+    "message": "Hola, esta es una prueba de la voz seleccionada. ¿Te gusta cómo suena?"
+  },
+  "hideApiKey": {
+    "message": "Ocultar API key"
+  },
+  "showApiKey": {
+    "message": "Mostrar API key"
+  },
+  "changesApplied": {
+    "message": "Cambios aplicados"
+  },
+  "reloadPage": {
+    "message": "Recargar Página"
+  },
+  "reloadPageDescription": {
+    "message": "Recarga la página para ver los cambios"
+  },
+  "testingConnection": {
+    "message": "Probando conexión con Gemini..."
+  },
+  "apiKeyValid": {
+    "message": "API key válida ({0})"
+  },
+  "aiFunctionsActivated": {
+    "message": "¡Funciones de IA activadas!"
+  },
+  "modelsAvailable": {
+    "message": "{0} modelos disponibles. ¡Listo para usar!"
+  },
+  "apiKeyInvalidOrNoPermissions": {
+    "message": "API key inválida o sin permisos"
+  },
+  "unknownError": {
+    "message": "Error desconocido"
+  },
+  "invalidApiKeyFormat": {
+    "message": "Formato de API key inválido. Debe empezar con \"AIzaSy\""
+  },
+  "enterApiKeyToTest": {
+    "message": "Ingresa una API key para probar"
+  },
+  "invalidApiKeyCheckStudio": {
+    "message": "API key inválida. Revisa tu clave en Google AI Studio"
+  },
+  "authenticationError": {
+    "message": "Error de autenticación. Verifica tu API key"
+  },
+  "voices": {
+    "message": "Voces"
+  },
+  "voiceTestTextEn": {
+    "message": "Hello, this is a test of the selected voice. How does it sound?"
+  },
+  "voiceTestTextEs": {
+    "message": "Hola, esta es una prueba de la voz seleccionada. ¿Cómo suena?"
+  },
+  "voiceTestTextFr": {
+    "message": "Bonjour, ceci est un test de la voix sélectionnée. Comment cela sonne-t-il?"
+  },
+  "voiceTestTextDe": {
+    "message": "Hallo, dies ist ein Test der ausgewählten Stimme. Wie klingt das?"
+  },
+  "voiceTestTextIt": {
+    "message": "Ciao, questo è un test della voce selezionata. Come suona?"
+  },
+  "voiceTestTextPt": {
+    "message": "Olá, este é um teste da voz selecionada. Como soa?"
+  },
+  "voiceTestTextRu": {
+    "message": "Привет, это тест выбранного голоса. Как это звучит?"
+  },
+  "voiceTestTextJa": {
+    "message": "こんにちは、これは選択された音声のテストです。どのように聞こえますか？"
+  },
+  "voiceTestTextKo": {
+    "message": "안녕하세요, 이것은 선택된 음성의 테스트입니다. 어떻게 들리나요?"
+  },
+  "voiceTestTextZh": {
+    "message": "你好，这是所选语音的测试。听起来怎么样？"
+  },
+  "readPdfText": {
+    "message": "Leer texto del PDF"
+  },
+  "readCode": {
+    "message": "Leer código"
+  },
+  "analyzeCodeWithAI": {
+    "message": "Analizar código con IA"
+  },
+  "readPdfAloud": {
+    "message": "📄 Leer PDF en voz alta"
+  },
+  "playFromHerePdf": {
+    "message": "📄 Reproducir desde aquí (PDF)"
+  },
+  "copyCode": {
+    "message": "Copiar código"
+  },
+  "searchWeb": {
+    "message": "Buscar en web"
+  },
+  "analyzeImageWithAI": {
+    "message": "Analizar imagen con IA"
+  },
+  "consultImage": {
+    "message": "Consultar imagen"
+  },
+  "explainPdfContent": {
+    "message": "📄 Explicar contenido PDF"
+  },
+  "copyPdfText": {
+    "message": "Copiar texto PDF"
+  },
+  "textToSpeech": {
+    "message": "Texto a Voz"
+  },
+  "startReadingFromHere": {
+    "message": "Comenzar lectura desde aquí"
+  },
+  "smartTextActions": {
+    "message": "Acciones Inteligentes de Texto"
+  },
+  "codeConsultationTitle": {
+    "message": "Consulta de código seleccionado"
+  },
+  "playPauseTooltip": {
+    "message": "1 clic: Pausa/Reanuda • 2 clics: Reiniciar"
+  },
+  "closeAndStopPlayback": {
+    "message": "Cerrar y parar reproducción"
+  },
+  "consultationResult": {
+    "message": "Resultado de la consulta"
+  },
+  "copyQuery": {
+    "message": "Copiar consulta"
+  },
+  "playAudioTooltip": {
+    "message": "1 clic: reproducir • 2 clics: reiniciar"
+  },
+  "writeImageQueryPlaceholder": {
+    "message": "Escribe tu consulta sobre la imagen..."
+  },
+  "predefinedQueries": {
+    "message": "Consultas predefinidas:"
+  },
+  "writeCodeQueryPlaceholder": {
+    "message": "Escribe tu pregunta sobre el código..."
+  },
+  "explainFunctionality": {
+    "message": "Explicar funcionamiento"
+  },
+  "reviewAndOptimize": {
+    "message": "Revisar y optimizar"
+  },
+  "useCases": {
+    "message": "Casos de uso"
+  },
+  "documentCode": {
+    "message": "Documentar código"
+  },
+  "selectedCode": {
+    "message": "Código seleccionado"
+  },
+  "makeQueryToAnalyzeCode": {
+    "message": "Haz una consulta para analizar este código"
+  },
+  "writeQuestionOrSelectPredefined": {
+    "message": "Escribe una pregunta o selecciona una consulta predefinida para comenzar el análisis"
+  },
+  "consult": {
+    "message": "Consultar"
+  },
+  "errorConsultingImage": {
+    "message": "Error al consultar imagen"
+  },
+  "processingQuery": {
+    "message": "Procesando consulta..."
+  },
+  "imageUrlCopiedToClipboard": {
+    "message": "URL de imagen copiada al portapapeles"
+  },
+  "errorCopyingImage": {
+    "message": "Error al copiar imagen"
+  },
+  "openingImageInGoogleLens": {
+    "message": "Abriendo imagen en Google Lens..."
+  },
+  "openingImageSearchInGoogle": {
+    "message": "Abriendo búsqueda de imagen en Google..."
+  },
+  "goToGoogleAiStudio": {
+    "message": "Ve a <a href=\"https://aistudio.google.com/app/apikey\" target=\"_blank\" rel=\"noopener noreferrer\">Google AI Studio</a>"
+  },
+  "signInWithGoogle": {
+    "message": "Inicia sesión con tu cuenta de Google"
+  },
+  "openExtensionSettings": {
+    "message": "Abre la configuración de la extensión"
+  },
+  "pasteApiKey": {
+    "message": "Pega tu API key en el campo correspondiente"
+  },
+  "apiKeyBenefits": {
+    "message": "✨ Beneficios de usar tu propia API key:"
+  },
+  "noSharedLimits": {
+    "message": "🚀 Sin límites de uso compartidos"
+  },
+  "totalPrivacy": {
+    "message": "🔒 Privacidad total de tus consultas"
+  },
+  "fasterResponses": {
+    "message": "⚡ Respuestas más rápidas"
+  },
+  "completelyFree": {
+    "message": "🆓 Completamente gratuito (hasta 60 requests/minuto)"
+  },
+  "geminiConnectionError": {
+    "message": "No se pudo conectar con Gemini AI. Verifica tu API key y conexión a internet."
+  },
+  "quotaExceededError": {
+    "message": "Se han agotado los tokens disponibles para tu API key de Gemini. Espera hasta el próximo periodo de renovación o considera actualizar tu plan."
+  },
+  "imageAccessError": {
+    "message": "No se pudo acceder a la imagen. Verifica que la imagen sea accesible y los permisos de la extensión."
+  },
+  "imageFormatNotSupported": {
+    "message": "El formato de imagen no es compatible. Gemini soporta JPEG, PNG, WebP y GIF."
+  },
+  "imageTooLarge": {
+    "message": "La imagen es demasiado grande. Intenta con una imagen más pequeña."
+  },
+  "codeTooLong": {
+    "message": "El código seleccionado es demasiado largo. Intenta seleccionar una porción más pequeña para análisis."
+  },
+  "codeFormatError": {
+    "message": "El formato del código no pudo ser procesado correctamente. Verifica que el código esté bien formateado."
+  },
+  "tokensExhausted": {
+    "message": "Tokens Agotados"
+  },
+  "tokensRenewMonthly": {
+    "message": "Los tokens se renuevan automáticamente cada mes"
+  },
+  "checkQuotaAt": {
+    "message": "Puedes verificar tu cuota en:"
+  },
+  "considerUpgradingPlan": {
+    "message": "Considera actualizar a un plan con más tokens si lo necesitas"
+  },
+  "imageTip": {
+    "message": "Tip: Asegúrate de que la imagen esté completamente cargada y sea visible en la página."
+  },
+  "codeTip": {
+    "message": "Tip: Para mejor análisis, selecciona porciones específicas de código o funciones completas."
+  },
+  "apiKeyNotConfigured": {
+    "message": "API key no configurada"
+  },
+  "processingQueryWithGemini": {
+    "message": "Procesando consulta con Gemini AI"
+  },
+  "analyzingImageWithGemini": {
+    "message": "Analizando imagen con Gemini AI"
+  },
+  "analyzingCodeWithGemini": {
+    "message": "Analizando código con Gemini AI"
+  },
+  "processingTextWithGemini": {
+    "message": "Procesando texto con Gemini AI"
+  },
+  "pleaseWaitDontSendAnother": {
+    "message": "Por favor espera... No envíes otra consulta hasta que termine esta."
+  },
+  "openingWebSearch": {
+    "message": "Abriendo búsqueda en web..."
+  },
+  "noTextSelectedToSearch": {
+    "message": "No hay texto seleccionado para buscar"
+  },
+  "noImagesFoundInSelection": {
+    "message": "No se encontraron imágenes en la selección"
+  },
+  "readingStartedFromSelection": {
+    "message": "Lectura iniciada desde la selección"
+  },
+  "readingPdfContent": {
+    "message": "Leyendo contenido del PDF"
+  },
+  "pdfPlaybackStartedFromSelection": {
+    "message": "Reproducción PDF iniciada desde la selección"
+  },
+  "playerNotAvailable": {
+    "message": "Error: Reproductor no disponible"
+  },
+  "pdfContentExplanationReady": {
+    "message": "Explicación del contenido PDF lista"
+  },
+  "errorExplainingPdfContent": {
+    "message": "Error explicando contenido PDF"
+  }
+}

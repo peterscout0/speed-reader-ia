@@ -1,0 +1,33 @@
+# Archivos de documentación (excepto README)
+PUBLISHING.md
+PRE-LAUNCH-AUDIT.md
+SECURITY-AND-PERMISSIONS.md
+QUICK-SUMMARY.md
+
+# Archivos de desarrollo
+*.log
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.bak
+*~
+
+# Node modules (si usas npm en el futuro)
+node_modules/
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Builds y paquetes
+*.zip
+*.crx
+*.pem
+
+# Archivos de sistema
+.DS_Store
+desktop.ini

@@ -1,0 +1,1315 @@
+{
+  "extensionName": {
+    "message": "Speed Reader IA",
+    "description": "Name of the extension"
+  },
+  "extensionDescription": {
+    "message": "AI-powered text-to-speech extension with contextual reading tools",
+    "description": "Description of the extension"
+  },
+  "optionsSubtitle": {
+    "message": "History management and advanced settings",
+    "description": "Subtitle for the options page"
+  },
+  "read": {
+    "message": "Read",
+    "description": "Read button text"
+  },
+  "describe": {
+    "message": "Describe",
+    "description": "Describe button text"
+  },
+  "copy": {
+    "message": "Copy",
+    "description": "Copy button text"
+  },
+  "play": {
+    "message": "Play",
+    "description": "Play button text"
+  },
+  "pause": {
+    "message": "Pause",
+    "description": "Pause button text"
+  },
+  "stop": {
+    "message": "Stop",
+    "description": "Stop button text"
+  },
+  "next": {
+    "message": "Next",
+    "description": "Next button text"
+  },
+  "previous": {
+    "message": "Previous",
+    "description": "Previous button text"
+  },
+  "speed": {
+    "message": "Speed",
+    "description": "Speed control label"
+  },
+  "volume": {
+    "message": "Volume",
+    "description": "Volume control label"
+  },
+  "settings": {
+    "message": "Settings",
+    "description": "Settings page title"
+  },
+  "configuration": {
+    "message": "Configuration",
+    "description": "Configuration section title"
+  },
+  "activate": {
+    "message": "Activate",
+    "description": "Activate button text"
+  },
+  "deactivate": {
+    "message": "Deactivate",
+    "description": "Deactivate button text"
+  },
+  "enabled": {
+    "message": "Enabled",
+    "description": "Enabled status text"
+  },
+  "disabled": {
+    "message": "Disabled",
+    "description": "Disabled status text"
+  },
+  "globalPlayer": {
+    "message": "Global Player",
+    "description": "Global audio player title"
+  },
+  "contextualIcons": {
+    "message": "Contextual Icons",
+    "description": "Contextual icons setting"
+  },
+  "voice": {
+    "message": "Voice",
+    "description": "Voice selection label"
+  },
+  "pitch": {
+    "message": "Pitch",
+    "description": "Pitch control label"
+  },
+  "selectVoice": {
+    "message": "Select Voice",
+    "description": "Voice selection placeholder"
+  },
+  "readerMode": {
+    "message": "Reader Mode",
+    "description": "Reader mode title"
+  },
+  "focusMode": {
+    "message": "Focus Mode",
+    "description": "Focus mode title"
+  },
+  "exitReaderMode": {
+    "message": "Exit Reader Mode",
+    "description": "Exit reader mode button"
+  },
+  "readSelected": {
+    "message": "Read Selected Text",
+    "description": "Read selected text tooltip"
+  },
+  "describeImage": {
+    "message": "Describe Image",
+    "description": "Describe image tooltip"
+  },
+  "copyText": {
+    "message": "Copy Text",
+    "description": "Copy text tooltip"
+  },
+  "analyzeCode": {
+    "message": "Analyze Code",
+    "description": "Analyze code tooltip"
+  },
+  "extensionInstalled": {
+    "message": "Speed-Reader IA installed",
+    "description": "Extension installed message"
+  },
+  "extensionInitialized": {
+    "message": "Extension initialized with default settings",
+    "description": "Extension initialized message"
+  },
+  "extensionUpdated": {
+    "message": "Extension updated successfully",
+    "description": "Extension updated message"
+  },
+  "settingsUpdated": {
+    "message": "Settings updated and distributed",
+    "description": "Settings updated message"
+  },
+  "extensionActivated": {
+    "message": "activated",
+    "description": "Extension activated status"
+  },
+  "extensionDeactivated": {
+    "message": "deactivated",
+    "description": "Extension deactivated status"
+  },
+  "errorLoadingSettings": {
+    "message": "Error loading settings",
+    "description": "Error loading settings message"
+  },
+  "errorUpdatingSettings": {
+    "message": "Error updating settings",
+    "description": "Error updating settings message"
+  },
+  "errorTogglingExtension": {
+    "message": "Error toggling extension",
+    "description": "Error toggling extension message"
+  },
+  "searchPlaceholder": {
+    "message": "Search or ask anything...",
+    "description": "Search input placeholder"
+  },
+  "queryPlaceholder": {
+    "message": "Ask about this content...",
+    "description": "Query input placeholder"
+  },
+  "geminiApiKey": {
+    "message": "Gemini API Key",
+    "description": "Gemini API key setting label"
+  },
+  "apiKeyPlaceholder": {
+    "message": "Enter your Gemini API key",
+    "description": "API key input placeholder"
+  },
+  "processing": {
+    "message": "Processing...",
+    "description": "Processing status message"
+  },
+  "analyzing": {
+    "message": "Analyzing...",
+    "description": "Analyzing status message"
+  },
+  "consultationHistory": {
+    "message": "Consultation History",
+    "description": "Consultation history title"
+  },
+  "clearHistory": {
+    "message": "Clear History",
+    "description": "Clear history button"
+  },
+  "noHistory": {
+    "message": "No consultation history",
+    "description": "No history message"
+  },
+  "toggleExtension": {
+    "message": "Toggle Extension",
+    "description": "Toggle extension command"
+  },
+  "toggleReaderMode": {
+    "message": "Toggle Reader Mode",
+    "description": "Toggle reader mode command"
+  },
+  "imageInQuery": {
+    "message": "Image under consultation",
+    "description": "Image consultation status"
+  },
+  "imageBeingAnalyzedByAI": {
+    "message": "This image is being analyzed by AI",
+    "description": "Image analysis status message"
+  },
+  "writeQueryOrSelectPredefinedForImage": {
+    "message": "Write a query or select a predefined option to analyze the image",
+    "description": "Image analysis instruction"
+  },
+
+  "consultationCanceled": {
+    "message": "Consultation canceled",
+    "description": "Consultation canceled message"
+  },
+  "selectedImageConsultation": {
+    "message": "Selected Image Consultation",
+    "description": "Selected image consultation title"
+  },
+  "consultationInProgressMessage": {
+    "message": "Please wait, consultation in progress...",
+    "description": "Consultation in progress notification message"
+  },
+  "cannotCloseWhileProcessing": {
+    "message": "Cannot close while processing consultation",
+    "description": "Tooltip for disabled close button during processing"
+  },
+  "toggleAudioPlayer": {
+    "message": "Toggle Audio Player",
+    "description": "Toggle audio player command"
+  },
+  "aiIntegration": {
+    "message": "AI Integration",
+    "description": "AI integration section title"
+  },
+  "apiKeyDescription": {
+    "message": "Enter your personal API key from Google AI Studio to use AI query functions.",
+    "description": "API key description text"
+  },
+  "getFreeApiKey": {
+    "message": "Get free API key →",
+    "description": "Get free API key link text"
+  },
+  "showHideApiKey": {
+    "message": "Show/Hide API key",
+    "description": "Show/hide API key button tooltip"
+  },
+  "testConnection": {
+    "message": "Test connection",
+    "description": "Test connection button tooltip"
+  },
+  "howToGetApiKey": {
+    "message": "How to get your free API key",
+    "description": "How to get API key section title"
+  },
+  "goToGoogleAI": {
+    "message": "Go to",
+    "description": "Go to Google AI Studio step"
+  },
+  "signInGoogle": {
+    "message": "Sign in with your Google account",
+    "description": "Sign in step"
+  },
+  "clickCreateApiKey": {
+    "message": "Click \"Create API key\"",
+    "description": "Create API key step"
+  },
+  "copyPasteKey": {
+    "message": "Copy the key and paste it here",
+    "description": "Copy paste key step"
+  },
+  "readyAiAccess": {
+    "message": "Ready! You'll have access to AI queries",
+    "description": "Ready AI access step"
+  },
+  "note": {
+    "message": "Note",
+    "description": "Note label"
+  },
+  "apiKeySafelyStored": {
+    "message": "Your API key is safely stored only in your browser.",
+    "description": "API key safety note"
+  },
+  "saveSettings": {
+    "message": "Save Settings",
+    "description": "Save settings button"
+  },
+  "errorStartingVoiceTest": {
+    "message": "Error starting voice test",
+    "description": "Error message for voice test failure"
+  },
+  "testVoice": {
+    "message": "Test Voice",
+    "description": "Test voice button text"
+  },
+  "selectConsultationDesc": {
+    "message": "Select a consultation from the history to view the complete details of the conversation with Gemini AI.",
+    "description": "Description text for consultation selection"
+  },
+  "imagesAnalyzed": {
+    "message": "Images Analyzed",
+    "description": "Statistics label for analyzed images"
+  },
+  "codeReviewed": {
+    "message": "Code Reviewed",
+    "description": "Statistics label for reviewed code"
+  },
+  "deleteConsultation": {
+    "message": "Delete Consultation",
+    "description": "Context menu option to delete consultation"
+  },
+  "exportConsultation": {
+    "message": "Export Consultation",
+    "description": "Context menu option to export consultation"
+  },
+  "historyConfiguration": {
+    "message": "History Configuration",
+    "description": "Settings section title for history configuration"
+  },
+  "maxHistoryItems": {
+    "message": "Maximum items in history:",
+    "description": "Label for maximum history items setting"
+  },
+  "maxHistoryHelp": {
+    "message": "Maximum number of consultations to keep in history (10-1000)",
+    "description": "Help text for maximum history items setting"
+  },
+  "autoCleanup": {
+    "message": "Auto-cleanup history:",
+    "description": "Label for auto-cleanup setting"
+  },
+  "never": {
+    "message": "Never",
+    "description": "Option for never cleaning up history"
+  },
+  "after7Days": {
+    "message": "After 7 days",
+    "description": "Option for cleaning up after 7 days"
+  },
+  "after30Days": {
+    "message": "After 30 days",
+    "description": "Option for cleaning up after 30 days"
+  },
+  "after90Days": {
+    "message": "After 90 days",
+    "description": "Option for cleaning up after 90 days"
+  },
+  "autoCleanupHelp": {
+    "message": "Automatically delete old consultations",
+    "description": "Help text for auto-cleanup setting"
+  },
+  "saveImageAnalysis": {
+    "message": "Save image analysis in history",
+    "description": "Checkbox label for saving image analysis"
+  },
+  "saveCodeAnalysis": {
+    "message": "Save code analysis in history",
+    "description": "Checkbox label for saving code analysis"
+  },
+  "interfaceLanguage": {
+    "message": "Interface language:",
+    "description": "Label for interface language setting"
+  },
+  "spanish": {
+    "message": "Spanish",
+    "description": "Spanish language option"
+  },
+  "english": {
+    "message": "English",
+    "description": "English language option"
+  },
+  "french": {
+    "message": "French",
+    "description": "French language option"
+  },
+  "german": {
+    "message": "German",
+    "description": "German language option"
+  },
+  "portuguese": {
+    "message": "Portuguese",
+    "description": "Portuguese language option"
+  },
+  "italian": {
+    "message": "Italian",
+    "description": "Italian language option"
+  },
+  "interfaceLanguageHelp": {
+    "message": "Change interface language (consultations keep their original language)",
+    "description": "Help text for interface language setting"
+  },
+  "saveConfiguration": {
+    "message": "Save Configuration",
+    "description": "Button to save configuration settings"
+  },
+  "exportData": {
+    "message": "Export Data",
+    "description": "Export section title"
+  },
+  "exportDesc": {
+    "message": "Export your consultation history for backup or analysis:",
+    "description": "Export section description"
+  },
+  "exportAsJSON": {
+    "message": "Export as JSON",
+    "description": "Button to export as JSON format"
+  },
+  "exportAsCSV": {
+    "message": "Export as CSV",
+    "description": "Button to export as CSV format"
+  },
+  "importData": {
+    "message": "Import Data",
+    "description": "Import section title and button text"
+  },
+  "importDesc": {
+    "message": "Import a previously exported history:",
+    "description": "Import section description"
+  },
+  "selectFile": {
+    "message": "Select File",
+    "description": "Button to select import file"
+  },
+  "audioControlTooltip": {
+    "message": "Click: Play | Double click: Restart",
+    "description": "Tooltip for audio control button"
+  },
+  "describeImageWithVoice": {
+    "message": "Describe image with voice",
+    "description": "Tooltip for image audio button"
+  },
+  "describeCodeWithVoice": {
+    "message": "Describe code with voice",
+    "description": "Tooltip for code audio button"
+  },
+  "couldNotPlayImageDescription": {
+    "message": "Could not play image description",
+    "description": "Error message for image audio failure"
+  },
+  "couldNotPlayCodeDescription": {
+    "message": "Could not play code description",
+    "description": "Error message for code audio failure"
+  },
+  "couldNotGenerateImageDescription": {
+    "message": "Could not generate image description",
+    "description": "Error message for image description generation failure"
+  },
+  "couldNotGenerateAudioDescription": {
+    "message": "Could not generate audio description",
+    "description": "Error message for audio description generation failure"
+  },
+  "couldNotGenerateCodeSummary": {
+    "message": "Could not generate code summary",
+    "description": "Error message for code summary generation failure"
+  },
+  "codeCopiedToClipboard": {
+    "message": "Code copied to clipboard",
+    "description": "Success message for code copy"
+  },
+  "couldNotCopyCode": {
+    "message": "Could not copy code",
+    "description": "Error message for code copy failure"
+  },
+  "queryCopiedToClipboard": {
+    "message": "Query copied to clipboard",
+    "description": "Success message for query copy"
+  },
+  "noQueryToCopy": {
+    "message": "No query to copy",
+    "description": "Info message when no query available to copy"
+  },
+  "contentCopiedToClipboard": {
+    "message": "Content copied to clipboard",
+    "description": "Success message for content copy"
+  },
+  "noContentToCopy": {
+    "message": "No content to copy",
+    "description": "Info message when no content available to copy"
+  },
+  "noContentToPlay": {
+    "message": "No content to play",
+    "description": "Info message when no content available to play"
+  },
+  "settingsReloading": {
+    "message": "Settings saved - Reloading page to apply changes...",
+    "description": "Message when settings are saved and page will reload"
+  },
+  "settingsError": {
+    "message": "Error saving settings",
+    "description": "Error message when settings save fails"
+  },
+  "deleteConfirm": {
+    "message": "Are you sure you want to delete this?",
+    "description": "Confirmation message for deletion"
+  },
+  "historyDeleted": {
+    "message": "deleted",
+    "description": "Success message part for history deletion"
+  },
+  "historyDeleteError": {
+    "message": "Error deleting history of",
+    "description": "Error message for history deletion failure"
+  },
+  "confirmDeleteAll": {
+    "message": "Are you sure you want to delete ALL history? This action cannot be undone.",
+    "description": "Confirmation message for deleting all history"
+  },
+  "historyCleared": {
+    "message": "All history has been deleted",
+    "description": "Success message when all history is cleared"
+  },
+  "deleteHistoryError": {
+    "message": "Error deleting history",
+    "description": "Error message for history deletion failure"
+  },
+  "exportImport": {
+    "message": "Export/Import",
+    "description": "Export/Import tab title"
+  },
+  "noImageConsultations": {
+    "message": "No image consultations",
+    "description": "Message when no image consultations exist"
+  },
+  "noCodeConsultations": {
+    "message": "No code consultations",
+    "description": "Message when no code consultations exist"
+  },
+  "lessThanHour": {
+    "message": "Less than 1 hour ago",
+    "description": "Relative time for less than an hour"
+  },
+  "hour": {
+    "message": "hour",
+    "description": "Singular form of hour"
+  },
+  "hours": {
+    "message": "hours",
+    "description": "Plural form of hours"
+  },
+  "day": {
+    "message": "day",
+    "description": "Singular form of day"
+  },
+  "days": {
+    "message": "days",
+    "description": "Plural form of days"
+  },
+  "timeAgoHours": {
+    "message": "{0} {1} ago",
+    "description": "Time ago format for hours, {0} = number, {1} = hour/hours"
+  },
+  "timeAgoDays": {
+    "message": "{0} {1} ago",
+    "description": "Time ago format for days, {0} = number, {1} = day/days"
+  },
+  "itemDeleted": {
+    "message": "Item deleted",
+    "description": "Success message when item is deleted"
+  },
+  "itemDeleteError": {
+    "message": "Error deleting item",
+    "description": "Error message when item deletion fails"
+  },
+  "noHistoryToExport": {
+    "message": "No history to export for",
+    "description": "Error message when no history exists for export"
+  },
+  "historyExported": {
+    "message": "exported",
+    "description": "Success message part when history is exported"
+  },
+  "exportError": {
+    "message": "Export error",
+    "description": "Error message for export failures"
+  },
+  "initializingReaderMode": {
+    "message": "Initializing reading mode... (not activated by default)"
+  },
+  "keyboardShortcutDetected": {
+    "message": "Keyboard shortcut detected: Ctrl+Shift+R"
+  },
+  "keyboardShortcutConfigured": {
+    "message": "Keyboard shortcut configured: Ctrl+Shift+R to toggle reading mode"
+  },
+  "readerModeAttempting": {
+    "message": "Attempting to activate reading mode..."
+  },
+  "readerModeCurrentState": {
+    "message": "Current state isActive:"
+  },
+  "readerModeCurrentUrl": {
+    "message": "Current URL:"
+  },
+  "readerModeAlreadyActive": {
+    "message": "Already active, skipping activation"
+  },
+  "readerModeContentExtracted": {
+    "message": "Content extracted:"
+  },
+  "readerModeCreatingView": {
+    "message": "Content extracted, creating view..."
+  },
+  "readerModeActivated": {
+    "message": "Reading mode activated successfully"
+  },
+  "readerModeDeactivating": {
+    "message": "Attempting to deactivate reading mode..."
+  },
+  "loadingConfiguration": {
+    "message": "Loading configuration..."
+  },
+  "configurationLoaded": {
+    "message": "Configuration loaded:"
+  },
+  "errorLoadingConfiguration": {
+    "message": "Error loading configuration:"
+  },
+  "initializingSelectionSystem": {
+    "message": "Initializing contextual selection system..."
+  },
+  "currentConfiguration": {
+    "message": "Current configuration:"
+  },
+  "selectionSystemExists": {
+    "message": "Selection system already exists, destroying first..."
+  },
+  "selectionContextualNotDefined": {
+    "message": "SelectionContextual is not defined"
+  },
+  "retryingSelectionInitialization": {
+    "message": "Retrying selection system initialization..."
+  },
+  "selectionSystemInitialized": {
+    "message": "Contextual selection system initialized successfully"
+  },
+  "instanceCreated": {
+    "message": "Instance created:"
+  },
+  "errorInitializingSelection": {
+    "message": "Error initializing selection system:"
+  },
+  "audioPlayerInitialized": {
+    "message": "Audio player initialized"
+  },
+  "errorInitializingPlayer": {
+    "message": "Error initializing player:"
+  },
+  "retryingPlayerInitialization": {
+    "message": "Retrying player initialization..."
+  },
+  "startingContextualSelection": {
+    "message": "Starting Contextual Selection System"
+  },
+  "startingReadingSystem": {
+    "message": "Starting reading system:"
+  },
+  "selectionWithImagesDeleted": {
+    "message": "SELECTION WITH IMAGES DELETED!"
+  },
+  "pdfDetectedInUrl": {
+    "message": "PDF detected in URL"
+  },
+  "pdfDetectedByMime": {
+    "message": "PDF detected by MIME type"
+  },
+  "chromePdfViewerDetected": {
+    "message": "Chrome PDF viewer detected"
+  },
+  "alternativeSpanishVoiceSelected": {
+    "message": "Alternative Spanish voice selected:"
+  },
+  "pdfJsViewerDetected": {
+    "message": "PDF.js viewer detected"
+  },
+  "embeddedPdfDetected": {
+    "message": "Embedded PDF detected"
+  },
+  "githubPdfDetected": {
+    "message": "GitHub PDF detected"
+  },
+  "blobPdfDetected": {
+    "message": "Blob PDF detected"
+  },
+  "pluginPdfDetected": {
+    "message": "Plugin PDF detected"
+  },
+  "pdfDetectedByCheck": {
+    "message": "PDF detected by check:"
+  },
+  "chromeNativeViewerDetected": {
+    "message": "Chrome native viewer detected - Extensions limited"
+  },
+  "pdfDetectedSecondVerification": {
+    "message": "PDF detected in second verification!"
+  },
+  "pdfDetectedFunctionsAvailable": {
+    "message": "PDF detected - Reading functions now available"
+  },
+  "pdfDetectedFunctionsReady": {
+    "message": "PDF detected - Reading functions available"
+  },
+  "initializingGlobalAudioPlayer": {
+    "message": "Initializing global audio player..."
+  },
+  "viewportContainmentApplied": {
+    "message": "Viewport containment applied"
+  },
+  "handlerConfigured": {
+    "message": "Handler configured"
+  },
+  "notSpaBasicDetection": {
+    "message": "Not SPA, using basic URL change detection..."
+  },
+  "spaDetectedConfiguring": {
+    "message": "SPA detected: {0} - Configuring simplified system..."
+  },
+  "manualRefreshSystemConfigured": {
+    "message": "Manual refresh system configured successfully"
+  },
+  "hybridSystemInitialized": {
+    "message": "Hybrid system initialized:"
+  },
+  "angularDocsContainerFound": {
+    "message": "Angular Docs container found:"
+  },
+  "containerFound": {
+    "message": "Container found:"
+  },
+  "searchingContainerByContent": {
+    "message": "Searching container by content..."
+  },
+  "significantChangeDetectedMainContainer": {
+    "message": "Significant change detected in main container"
+  },
+  "mainContainerDetected": {
+    "message": "Main container detected:"
+  },
+  "configuringManualControls": {
+    "message": "Configuring manual controls..."
+  },
+  "manualContentRefreshStarted": {
+    "message": "Manual content refresh started..."
+  },
+  "configuringNavigationInterception": {
+    "message": "Configuring navigation interception..."
+  },
+  "navigationPushState": {
+    "message": "Navigation: pushState ->"
+  },
+  "pdfNativeViewerMessage": {
+    "message": "This PDF uses Chrome's native viewer where extensions don't work properly.\n\nFor the extension to work correctly:"
+  },
+  "downloadAndOpenPdf": {
+    "message": "Download the PDF and open it directly in a new tab"
+  },
+  "usePdfJsViewer": {
+    "message": "Use a PDF.js viewer extension"
+  },
+  "openInExternalReader": {
+    "message": "Open in an external PDF reader"
+  },
+  "pdfRedirectConfirm": {
+    "message": "Do you want to open it in PDF.js to use all reading functions?\n\n(It will open in a new tab with better compatibility)"
+  },
+  "pdfOpenedInCompatibleViewer": {
+    "message": "PDF opened in compatible viewer"
+  },
+  "limitedFunctionsNativeViewer": {
+    "message": "Limited functions in native viewer"
+  },
+  "pdfModeActivatedManually": {
+    "message": "PDF mode activated manually"
+  },
+  "waitingForImageToLoad": {
+    "message": "Waiting for image to load..."
+  },
+  "sendToGlobalPlayer": {
+    "message": "Send to global player"
+  },
+  "preparingCodeAnalysis": {
+    "message": "Preparing code analysis with AI..."
+  },
+  "preparingImageAnalysis": {
+    "message": "Preparing image analysis with AI..."
+  },
+  "codeAnalysisTitle": {
+    "message": "Selected code analysis"
+  },
+  "imageAnalysisTitle": {
+    "message": "Image analysis with AI"
+  },
+  "codeAnalysisByGemini": {
+    "message": "Code Analysis by Gemini AI"
+  },
+  "imageAnalysisByGemini": {
+    "message": "Image Analysis by Gemini AI"
+  },
+  "codeAnalysisError": {
+    "message": "Code Analysis Error"
+  },
+  "imageAnalysisError": {
+    "message": "Image Analysis Error"
+  },
+  "globalPlayerError": {
+    "message": "Error: Could not initialize global player"
+  },
+  "globalPlayerNotAvailable": {
+    "message": "Global player not available for PDF"
+  },
+  "noConsultationsFor": {
+    "message": "No consultations for"
+  },
+  "images": {
+    "message": "images"
+  },
+  "code": {
+    "message": "code"
+  },
+  "text": {
+    "message": "text"
+  },
+  "image": {
+    "message": "Image"
+  },
+  "imageConsultation": {
+    "message": "Image Analysis"
+  },
+  "codeConsultation": {
+    "message": "Code Analysis"
+  },
+  "textConsultation": {
+    "message": "Text Query"
+  },
+  "voiceConfigSaved": {
+    "message": "Voice configuration saved"
+  },
+  "newVoiceWillApply": {
+    "message": "The new voice will apply when playing"
+  },
+  "audioPlayerReady": {
+    "message": "Audio player ready. This page contains no detectable text to play."
+  },
+  "restartFromBeginning": {
+    "message": "Restart from beginning"
+  },
+  "restartBtn": {
+    "message": "Restart"
+  },
+  "previousParagraph": {
+    "message": "Previous paragraph"
+  },
+  "previousBtn": {
+    "message": "Previous"
+  },
+  "playPause": {
+    "message": "Play/Pause"
+  },
+  "playBtn": {
+    "message": "Play"
+  },
+  "nextParagraph": {
+    "message": "Next paragraph"
+  },
+  "nextBtn": {
+    "message": "Next"
+  },
+  "errorLoadingConfig": {
+    "message": "Error loading configuration"
+  },
+  "errorSavingConfig": {
+    "message": "Error saving configuration"
+  },
+  "errorSendingConfig": {
+    "message": "Error sending configuration"
+  },
+  "queriesPerformed": {
+    "message": "Queries performed (estimated)"
+  },
+  "queries": {
+    "message": "queries"
+  },
+  "today": {
+    "message": "today"
+  },
+  "usageNote": {
+    "message": "Only counts queries from this extension. Actual limits may vary."
+  },
+  "updatingContent": {
+    "message": "Updating content..."
+  },
+  "contentUpdated": {
+    "message": "Content updated"
+  },
+  "restartedFromBeginning": {
+    "message": "Restarted from beginning"
+  },
+  "contentUpdatedRestarted": {
+    "message": "Content updated - Restarted from beginning ({0} elements)"
+  },
+  "readyToPlayParagraph": {
+    "message": "Ready to play paragraph {0}"
+  },
+  "pausedAtParagraph": {
+    "message": "Paused at paragraph {0}"
+  },
+  "restartedReadyToPlay": {
+    "message": "Restarted - Ready to play from beginning"
+  },
+  "minimizePlayer": {
+    "message": "Minimize player"
+  },
+  "expandPlayer": {
+    "message": "Expand player"
+  },
+  "settingsTooltip": {
+    "message": "Settings"
+  },
+  "configurationAlt": {
+    "message": "Settings"
+  },
+  "contentUpdatedParagraphs": {
+    "message": "Content updated - {0} paragraphs"
+  },
+  "contentUpdatedParagraphsAvailable": {
+    "message": "Content updated - {0} paragraphs available"
+  },
+  "paragraphs": {
+    "message": "paragraphs"
+  },
+  "readyToPlayParagraphFromSelection": {
+    "message": "Ready to play paragraph {0} (from selection)"
+  },
+  "playbackPaused": {
+    "message": "Playback paused"
+  },
+  "continuingPlayback": {
+    "message": "Continuing playback..."
+  },
+  "contentUpdatedNotification": {
+    "message": "📝 Content updated: {0} paragraphs detected"
+  },
+  "contentUpdatedLog": {
+    "message": "📝 Content updated: {0} → {1} paragraphs"
+  },
+  "elementsFound": {
+    "message": "📊 Elements found: {0}"
+  },
+  "firstElementsFoundAngular": {
+    "message": "🅰️ First elements found in Angular docs:"
+  },
+  "contentUpdatedCount": {
+    "message": "Content updated<br><span style=\"font-size: 11px; opacity: 0.7; font-family: inherit !important;\">{0} → {1} paragraphs</span>"
+  },
+  "voiceConfiguration": {
+    "message": "Voice Configuration"
+  },
+  "voiceLabel": {
+    "message": "Voice:"
+  },
+  "pitchLabel": {
+    "message": "Pitch:"
+  },
+  "volumeLabel": {
+    "message": "Volume:"
+  },
+  "testVoiceButton": {
+    "message": "Test Voice"
+  },
+  "contentDetected": {
+    "message": "Content detected - {0} paragraphs available"
+  },
+  "pausedAtParagraphNumber": {
+    "message": "Paused at paragraph {0}"
+  },
+  "readyToPlayParagraphNumber": {
+    "message": "Ready to play paragraph {0}"
+  },
+  "restartedParagraphCount": {
+    "message": "Restarted - Paragraph 1 of {0}"
+  },
+  "noContentToRestart": {
+    "message": "No content to restart"
+  },
+  "readingCompleted": {
+    "message": "Reading completed 🎉"
+  },
+  "playing": {
+    "message": "Playing..."
+  },
+  "playButton": {
+    "message": "Play"
+  },
+  "pauseButton": {
+    "message": "Pause"
+  },
+  "nextButton": {
+    "message": "Next"
+  },
+  "noContentToPlayGlobal": {
+    "message": "No content to play"
+  },
+  "audioPlaybackError": {
+    "message": "Error playing audio"
+  },
+  "voiceTestText": {
+    "message": "Hello, this is a test of the selected voice. Do you like how it sounds?"
+  },
+  "hideApiKey": {
+    "message": "Hide API key"
+  },
+  "showApiKey": {
+    "message": "Show API key"
+  },
+  "changesApplied": {
+    "message": "Changes applied"
+  },
+  "reloadPage": {
+    "message": "Reload Page"
+  },
+  "reloadPageDescription": {
+    "message": "Reload the page to see the changes"
+  },
+  "testingConnection": {
+    "message": "Testing connection with Gemini..."
+  },
+  "apiKeyValid": {
+    "message": "Valid API key ({0})"
+  },
+  "aiFunctionsActivated": {
+    "message": "AI functions activated!"
+  },
+  "modelsAvailable": {
+    "message": "{0} models available. Ready to use!"
+  },
+  "apiKeyInvalidOrNoPermissions": {
+    "message": "Invalid API key or no permissions"
+  },
+  "unknownError": {
+    "message": "Unknown error"
+  },
+  "invalidApiKeyFormat": {
+    "message": "Invalid API key format. Must start with \"AIzaSy\""
+  },
+  "enterApiKeyToTest": {
+    "message": "Enter an API key to test"
+  },
+  "invalidApiKeyCheckStudio": {
+    "message": "Invalid API key. Check your key in Google AI Studio"
+  },
+  "authenticationError": {
+    "message": "Authentication error. Verify your API key"
+  },
+  "voices": {
+    "message": "Voices"
+  },
+  "voiceTestTextEn": {
+    "message": "Hello, this is a test of the selected voice. How does it sound?"
+  },
+  "voiceTestTextEs": {
+    "message": "Hola, esta es una prueba de la voz seleccionada. ¿Cómo suena?"
+  },
+  "voiceTestTextFr": {
+    "message": "Bonjour, ceci est un test de la voix sélectionnée. Comment cela sonne-t-il?"
+  },
+  "voiceTestTextDe": {
+    "message": "Hallo, dies ist ein Test der ausgewählten Stimme. Wie klingt das?"
+  },
+  "voiceTestTextIt": {
+    "message": "Ciao, questo è un test della voce selezionata. Come suona?"
+  },
+  "voiceTestTextPt": {
+    "message": "Olá, este é um teste da voz selecionada. Como soa?"
+  },
+  "voiceTestTextRu": {
+    "message": "Привет, это тест выбранного голоса. Как это звучит?"
+  },
+  "voiceTestTextJa": {
+    "message": "こんにちは、これは選択された音声のテストです。どのように聞こえますか？"
+  },
+  "voiceTestTextKo": {
+    "message": "안녕하세요, 이것은 선택된 음성의 테스트입니다. 어떻게 들리나요?"
+  },
+  "voiceTestTextZh": {
+    "message": "你好，这是所选语音的测试。听起来怎么样？"
+  },
+  "readPdfText": {
+    "message": "Read PDF text"
+  },
+  "readCode": {
+    "message": "Read code"
+  },
+  "analyzeCodeWithAI": {
+    "message": "Analyze code with AI"
+  },
+  "readPdfAloud": {
+    "message": "📄 Read PDF aloud"
+  },
+  "playFromHerePdf": {
+    "message": "📄 Play from here (PDF)"
+  },
+  "copyCode": {
+    "message": "Copy code"
+  },
+  "searchWeb": {
+    "message": "Search on web"
+  },
+  "analyzeImageWithAI": {
+    "message": "Analyze image with AI"
+  },
+  "consultImage": {
+    "message": "Consult image"
+  },
+  "explainPdfContent": {
+    "message": "📄 Explain PDF content"
+  },
+  "copyPdfText": {
+    "message": "Copy PDF text"
+  },
+  "textToSpeech": {
+    "message": "Text to Speech"
+  },
+  "startReadingFromHere": {
+    "message": "Start reading from here"
+  },
+  "smartTextActions": {
+    "message": "Smart Text Actions"
+  },
+  "codeConsultationTitle": {
+    "message": "Selected code consultation"
+  },
+  "playPauseTooltip": {
+    "message": "1 click: Pause/Resume • 2 clicks: Restart"
+  },
+  "closeAndStopPlayback": {
+    "message": "Close and stop playback"
+  },
+  "consultationResult": {
+    "message": "Consultation result"
+  },
+  "copyQuery": {
+    "message": "Copy query"
+  },
+  "playAudioTooltip": {
+    "message": "1 click: play • 2 clicks: restart"
+  },
+  "writeImageQueryPlaceholder": {
+    "message": "Write your query about the image..."
+  },
+  "predefinedQueries": {
+    "message": "Predefined queries:"
+  },
+  "writeCodeQueryPlaceholder": {
+    "message": "Write your question about the code..."
+  },
+  "explainFunctionality": {
+    "message": "Explain functionality"
+  },
+  "reviewAndOptimize": {
+    "message": "Review and optimize"
+  },
+  "useCases": {
+    "message": "Use cases"
+  },
+  "documentCode": {
+    "message": "Document code"
+  },
+  "selectedCode": {
+    "message": "Selected code"
+  },
+  "makeQueryToAnalyzeCode": {
+    "message": "Make a query to analyze this code"
+  },
+  "writeQuestionOrSelectPredefined": {
+    "message": "Write a question or select a predefined query to start the analysis"
+  },
+  "consult": {
+    "message": "Consult"
+  },
+  "errorConsultingImage": {
+    "message": "Error consulting image"
+  },
+  "processingQuery": {
+    "message": "Processing query..."
+  },
+  "imageUrlCopiedToClipboard": {
+    "message": "Image URL copied to clipboard"
+  },
+  "errorCopyingImage": {
+    "message": "Error copying image"
+  },
+  "openingImageInGoogleLens": {
+    "message": "Opening image in Google Lens..."
+  },
+  "openingImageSearchInGoogle": {
+    "message": "Opening image search in Google..."
+  },
+  "goToGoogleAiStudio": {
+    "message": "Go to <a href=\"https://aistudio.google.com/app/apikey\" target=\"_blank\" rel=\"noopener noreferrer\">Google AI Studio</a>"
+  },
+  "signInWithGoogle": {
+    "message": "Sign in with your Google account"
+  },
+  "openExtensionSettings": {
+    "message": "Open extension settings"
+  },
+  "pasteApiKey": {
+    "message": "Paste your API key in the corresponding field"
+  },
+  "apiKeyBenefits": {
+    "message": "✨ Benefits of using your own API key:"
+  },
+  "noSharedLimits": {
+    "message": "🚀 No shared usage limits"
+  },
+  "totalPrivacy": {
+    "message": "🔒 Total privacy of your queries"
+  },
+  "fasterResponses": {
+    "message": "⚡ Faster responses"
+  },
+  "completelyFree": {
+    "message": "🆓 Completely free (up to 60 requests/minute)"
+  },
+  "geminiConnectionError": {
+    "message": "Could not connect to Gemini AI. Check your API key and internet connection."
+  },
+  "quotaExceededError": {
+    "message": "Available tokens for your Gemini API key have been exhausted. Wait until the next renewal period or consider upgrading your plan."
+  },
+  "imageAccessError": {
+    "message": "Could not access the image. Check that the image is accessible and extension permissions."
+  },
+  "imageFormatNotSupported": {
+    "message": "Image format is not supported. Gemini supports JPEG, PNG, WebP and GIF."
+  },
+  "imageTooLarge": {
+    "message": "Image is too large. Try with a smaller image."
+  },
+  "codeTooLong": {
+    "message": "Selected code is too long. Try selecting a smaller portion for analysis."
+  },
+  "codeFormatError": {
+    "message": "Code format could not be processed correctly. Check that the code is well formatted."
+  },
+  "tokensExhausted": {
+    "message": "Tokens Exhausted"
+  },
+  "tokensRenewMonthly": {
+    "message": "Tokens renew automatically every month"
+  },
+  "checkQuotaAt": {
+    "message": "You can check your quota at:"
+  },
+  "considerUpgradingPlan": {
+    "message": "Consider upgrading to a plan with more tokens if needed"
+  },
+  "imageTip": {
+    "message": "Tip: Make sure the image is fully loaded and visible on the page."
+  },
+  "codeTip": {
+    "message": "Tip: For better analysis, select specific code portions or complete functions."
+  },
+  "apiKeyNotConfigured": {
+    "message": "API key not configured"
+  },
+  "processingQueryWithGemini": {
+    "message": "Processing query with Gemini AI"
+  },
+  "analyzingImageWithGemini": {
+    "message": "Analyzing image with Gemini AI"
+  },
+  "analyzingCodeWithGemini": {
+    "message": "Analyzing code with Gemini AI"
+  },
+  "processingTextWithGemini": {
+    "message": "Processing text with Gemini AI"
+  },
+  "pleaseWaitDontSendAnother": {
+    "message": "Please wait... Don't send another query until this one finishes."
+  },
+  "openingWebSearch": {
+    "message": "Opening web search..."
+  },
+  "noTextSelectedToSearch": {
+    "message": "No text selected to search"
+  },
+  "noImagesFoundInSelection": {
+    "message": "No images found in selection"
+  },
+  "readingStartedFromSelection": {
+    "message": "Reading started from selection"
+  },
+  "readingPdfContent": {
+    "message": "Reading PDF content"
+  },
+  "pdfPlaybackStartedFromSelection": {
+    "message": "PDF playback started from selection"
+  },
+  "playerNotAvailable": {
+    "message": "Error: Player not available"
+  },
+  "pdfContentExplanationReady": {
+    "message": "PDF content explanation ready"
+  },
+  "errorExplainingPdfContent": {
+    "message": "Error explaining PDF content"
+  }
+}

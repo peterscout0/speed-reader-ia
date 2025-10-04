@@ -1,0 +1,1767 @@
+/* Fuente fija para toda la extensión - no cambia según la web */
+.audio-player-global,
+.audio-player-global *,
+.audio-player-global *::before,
+.audio-player-global *::after,
+.voice-settings-panel,
+.voice-settings-panel *,
+div[style*="position: fixed"][style*="z-index: 2147483645"],
+div[style*="position: fixed"][style*="z-index: 2147483651"] {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* reproductor compacto */
+.audio-player-global {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 2147483647 !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    pointer-events: auto !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    overflow: visible !important;
+    outline: none !important;
+    border: none !important;
+}
+
+/* Eliminar efectos visuales durante interacciones del contenedor global */
+.audio-player-global:focus,
+.audio-player-global:focus-within,
+.audio-player-global:active {
+    outline: none !important;
+    border: none !important;
+}
+
+/* Protección global contra interferencias CSS externas en todos los elementos */
+.audio-player-global *,
+.audio-player-global *::before,
+.audio-player-global *::after {
+    box-sizing: border-box !important;
+    font-family: inherit !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    line-height: normal !important;
+    text-align: left !important;
+    direction: ltr !important;
+    unicode-bidi: normal !important;
+}
+
+/* Protección específica para todos los elementos img dentro del reproductor */
+.audio-player-global img {
+    display: block !important;
+    max-width: none !important;
+    max-height: none !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    border: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    background: none !important;
+    background-image: none !important;
+    content: none !important;
+}
+
+/* Protección específica para botones y sus contenidos */
+.audio-player-global button {
+    font-family: inherit !important;
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    line-height: normal !important;
+    cursor: pointer !important;
+}
+
+/* Permitir pseudoelementos específicos para el botón minimizar */
+.audio-player-global button::before,
+.audio-player-global button::after {
+    content: none !important;
+    display: none !important;
+}
+
+.audio-player-global .minimize-btn-header::after,
+.audio-player-global .settings-btn::after {
+    display: block !important;
+}
+
+.compact-player {
+    position: relative !important;
+    width: 350px !important;
+    background: rgba(30, 30, 35, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 24px !important;
+    border: 1px solid rgba(100, 200, 255, 0.2) !important;
+    overflow: hidden !important;
+    pointer-events: all !important;
+    cursor: default !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    z-index: inherit !important;
+    outline: none !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.compact-player:hover {
+    border: 1px solid rgba(100, 200, 255, 0.2);
+}
+
+/* Eliminar efectos visuales durante interacciones del reproductor */
+.compact-player:focus,
+.compact-player:focus-within,
+.compact-player:active {
+    outline: none !important;
+    border: 1px solid rgba(100, 200, 255, 0.2) !important;
+}
+
+/* Área de arrastre neumorphism oscuro */
+.audio-player-global .player-drag-area {
+    background: linear-gradient(135deg, rgba(60, 150, 255, 0.8) 0%, rgba(30, 100, 200, 0.9) 100%) !important;
+    padding: 12px 20px !important;
+    cursor: grab !important;
+    user-select: none !important;
+    border-radius: 24px 24px 0 0 !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-bottom: 1px solid rgba(100, 200, 255, 0.2) !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.audio-player-global .player-drag-area:hover {
+    background: linear-gradient(135deg, rgba(70, 160, 255, 0.5) 0%, rgba(40, 120, 220, 0.6) 100%) !important;
+}
+
+.player-drag-area:active {
+    cursor: grabbing !important;
+}
+
+/* Estilo para cuando se está arrastrando */
+.audio-player-global.dragging {
+    border: 1px solid rgba(100, 200, 255, 0.3);
+}
+
+.audio-player-global.dragging .player-drag-area {
+    cursor: grabbing !important;
+    background: linear-gradient(135deg, rgba(50, 140, 235, 0.6) 0%, rgba(20, 90, 180, 0.7) 100%);
+}
+
+/* Indicador de arrastre neumorphism */
+.audio-player-global .drag-indicator {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    gap: 0px !important; 
+    position: relative !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding-right: 60px !important;
+    box-sizing: border-box !important;
+}
+
+/* Botón de refresh en el header */
+.audio-player-global .refresh-btn-header {
+    position: absolute !important;
+    right: 30px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 24px !important;
+    height: 20px !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+    min-height: 20px !important;
+    max-height: 20px !important;
+    border: 1px solid rgba(100, 200, 255, 0.2) !important;
+    border-radius: 6px !important;
+    background: rgba(35, 35, 40, 0.9) !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all 0.2s ease !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    text-shadow: none !important;
+    overflow: hidden !important;
+}
+
+/* Icono SVG del botón refresh */
+.audio-player-global .refresh-btn-header img {
+    width: 12px !important;
+    height: 12px !important;
+    filter: brightness(0) saturate(100%) invert(67%) sepia(100%) saturate(500%) hue-rotate(180deg) brightness(110%) contrast(110%) !important;
+    pointer-events: none !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.audio-player-global .refresh-btn-header:hover {
+    background: rgba(45, 45, 50, 1) !important;
+    border-color: rgba(120, 220, 255, 0.3) !important;
+    transform: translateY(-50%) scale(1.05) !important;
+}
+
+.audio-player-global .refresh-btn-header:hover img {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(100%) saturate(600%) hue-rotate(180deg) brightness(120%) contrast(120%) !important;
+}
+
+/* Botón de minimizar en el header */
+.audio-player-global .minimize-btn-header {
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 24px !important;
+    height: 20px !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+    min-height: 20px !important;
+    max-height: 20px !important;
+    border: none !important;
+    border-radius: 6px !important;
+    background: rgba(35, 35, 40, 0.9) !important;
+    color: rgba(100, 200, 255, 0.9) !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid rgba(100, 200, 255, 0.2) !important;
+    font-size: 12px !important;
+    transition: all 0.2s ease !important;
+    font-weight: bold !important;
+    text-indent: -9999px !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.audio-player-global .minimize-btn-header::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 12px !important;
+    height: 12px !important;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/icons/minimize.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 12px 12px !important;
+    filter: brightness(0) saturate(100%) invert(67%) sepia(100%) saturate(500%) hue-rotate(180deg) brightness(110%) contrast(110%) !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    margin: auto !important;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    z-index: auto !important;
+    clip: auto !important;
+    clip-path: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+}
+
+.audio-player-global .minimize-btn-header:hover {
+    background: rgba(45, 45, 50, 1) !important;
+    color: rgba(120, 220, 255, 1) !important;
+    border: 1px solid rgba(120, 220, 255, 0.3) !important;
+}
+
+.audio-player-global .minimize-btn-header:hover::after {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(100%) saturate(600%) hue-rotate(180deg) brightness(120%) contrast(120%) !important;
+}
+
+.drag-dots {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.audio-player-global .drag-text {
+    flex: 1 !important;
+    text-align: center !important;
+    font-weight: 600 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Tooltip de ayuda */
+.player-drag-area::after {
+    content: "Arrastra para mover";
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.player-drag-area:hover::after {
+    opacity: 1;
+}
+
+/* Estado de arrastre */
+.compact-player.dragging {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    transform-origin: center;
+    z-index: 2147483648;
+    transition: none !important; 
+    border: none !important; 
+    outline: none !important; 
+}
+
+.compact-player.dragging * {
+    border: none !important;
+    outline: none !important; 
+}
+
+.compact-player.dragging .drag-indicator {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Contenedor de progreso superior - estilo reproductor estándar */
+.progress-container-top {
+    padding: 12px 20px 8px;
+    background: rgba(25, 25, 30, 0.9);
+    border-bottom: 1px solid rgba(100, 200, 255, 0.1);
+}
+
+/* Contenedor principal neumorphism */
+.audio-player-global .player-main {
+    display: flex !important;
+    align-items: center !important;
+    padding: 16px 0px 16px 0px !important;
+    background: rgba(25, 25, 30, 0.9) !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Botones neumorphism oscuro */
+.audio-player-global .compact-btn {
+    width: 44px !important;
+    height: 44px !important;
+    border: none !important;
+    border-radius: 12px !important;
+    background: rgba(35, 35, 40, 0.9) !important;
+    color: rgba(100, 200, 255, 0.9) !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    border: 1px solid rgba(100, 200, 255, 0.2) !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.audio-player-global .compact-btn:hover {
+    background: rgba(45, 45, 50, 1) !important;
+    color: rgba(120, 220, 255, 1) !important;
+    border: 1px solid rgba(120, 220, 255, 0.3) !important;
+}
+
+.audio-player-global .compact-btn:active {
+    background: rgba(20, 20, 25, 0.8) !important;
+    border: 1px solid rgba(100, 200, 255, 0.3) !important;
+}
+
+.audio-player-global .compact-btn img {
+    width: 20px !important;
+    height: 20px !important;
+    filter: brightness(0) saturate(100%) invert(67%) sepia(100%) saturate(500%) hue-rotate(180deg) brightness(110%) contrast(110%) !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    background-image: none !important;
+    content: none !important;
+    text-indent: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    image-rendering: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: auto !important;
+    overflow: visible !important;
+    clip: auto !important;
+    clip-path: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+}
+
+.audio-player-global .compact-btn:hover img {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(100%) saturate(600%) hue-rotate(180deg) brightness(120%) contrast(120%) !important;
+}
+
+/* Estilos específicos para el botón de configuración con ícono waveform */
+.audio-player-global .settings-btn {
+    position: relative !important;
+    text-indent: -9999px !important; 
+    overflow: visible !important;
+}
+
+.audio-player-global .settings-btn img {
+    display: none !important; 
+}
+
+.audio-player-global .settings-btn:hover img {
+    display: none !important;
+}
+
+/* Respaldo simplificado con background-image */
+.audio-player-global .settings-btn::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 22px !important;
+    height: 22px !important;
+    background-image: url('chrome-extension://__MSG_@@extension_id__/icons/waveform.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 22px 22px !important;
+    filter: brightness(0) saturate(100%) invert(67%) sepia(100%) saturate(500%) hue-rotate(180deg) brightness(110%) contrast(110%) !important;
+    transform: translate(-50%, -50%) !important;
+    opacity: 1 !important;
+    z-index: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    clip: auto !important;
+    clip-path: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.audio-player-global .settings-btn:hover::after {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(100%) saturate(600%) hue-rotate(180deg) brightness(120%) contrast(120%) !important;
+    transform: translate(-50%, -50%) scale(1.05) !important;
+}
+
+/* Botón especial de play neumorphism */
+.play-btn {
+    background: linear-gradient(135deg, rgba(60, 150, 255, 0.2) 0%, rgba(30, 100, 200, 0.3) 100%) !important;
+    border: 1px solid rgba(100, 200, 255, 0.3) !important;
+}
+
+.play-btn:hover {
+    background: linear-gradient(135deg, rgba(70, 160, 255, 0.3) 0%, rgba(40, 120, 220, 0.4) 100%) !important;
+    border: 1px solid rgba(120, 220, 255, 0.4) !important;
+}
+
+/* Sección izquierda - Controles */
+.player-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Sección izquierda - Botones de control */
+.player-left {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Sección derecha - Configuraciones */
+.player-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 2px;
+}
+
+/* Eliminar margen del último elemento */
+.player-right > *:last-child {
+    margin-right: 0 !important;
+}
+
+/* Barra de progreso neumorphism - ahora en la parte superior */
+.progress-container-top .progress-bar {
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background: rgba(15, 15, 20, 0.6);
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+    border: none;
+    margin-bottom: 6px;
+    z-index: 1;
+}
+
+.progress-container-top .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(60, 150, 255, 0.8) 0%, rgba(30, 100, 200, 0.9) 100%);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+    position: relative;
+    z-index: 2;
+    width: 0%;
+}
+
+.audio-player-global .progress-container-top .progress-text {
+    font-size: 10px !important;
+    color: rgba(200, 200, 200, 0.7) !important;
+    text-align: center !important;
+    font-weight: 500 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Estilos base para compatibilidad */
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background: rgba(15, 15, 20, 0.6);
+    position: relative;
+    cursor: pointer;
+    overflow: visible;
+    border: none;
+    z-index: 1;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(60, 150, 255, 0.8) 0%, rgba(30, 100, 200, 0.9) 100%);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+    position: relative;
+    z-index: 2;
+    width: 0%;
+}
+
+.audio-player-global .progress-text {
+    font-size: 11px !important;
+    color: rgba(200, 200, 200, 0.8) !important;
+    text-align: center !important;
+    font-weight: 500 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Progress handle para interacción */
+.progress-handle {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    background: rgba(100, 200, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    cursor: pointer;
+    left: 0%; 
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+.progress-bar:hover .progress-handle {
+    opacity: 1;
+}
+
+.progress-handle:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    background: rgba(120, 220, 255, 1);
+}
+
+/* Selector de velocidad neumorphism completo */
+.compact-select {
+    background: linear-gradient(145deg, rgba(20, 20, 28, 0.98), rgba(35, 35, 42, 0.98)) !important;
+    border: 1px solid rgba(100, 200, 255, 0.2) !important; 
+    border-radius: 12px !important;
+    color: rgba(240, 240, 245, 0.98) !important;
+    padding: 0 34px 0 16px !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    min-width: 90px !important;
+    width: 90px !important;
+    height: 40px !important;
+    text-align: center !important;
+    text-align-last: center !important;
+    position: relative !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    letter-spacing: 0.8px !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+    margin-right: 0px !important;
+    outline: none !important;
+    backdrop-filter: blur(15px) !important;
+    
+    content: "1.0x" !important;
+   
+    box-shadow: 
+        inset 3px 3px 8px rgba(0, 0, 0, 0.5),
+        inset -3px -3px 8px rgba(80, 80, 90, 0.2),
+        0 4px 16px rgba(0, 0, 0, 0.3),
+        0 2px 6px rgba(96, 170, 255, 0.2),
+        0 0 0 1px rgba(96, 170, 255, 0.15) !important;
+    /* Flecha personalizada neumórfica */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12' viewBox='0 0 16 12'%3E%3Cdefs%3E%3ClinearGradient id='arrowGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2360AAFF;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%234A90E2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23arrowGrad)' d='M8 12L0 4h16z'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 14px center !important;
+    background-size: 12px 8px !important;
+}
+
+/* Pseudo elemento para mostrar 1.0x cuando esté vacío */
+.compact-select:empty::before,
+.compact-select:invalid::before {
+    content: "1.0x" !important;
+    color: rgba(240, 240, 245, 0.98) !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+.compact-select:hover {
+    background: linear-gradient(145deg, rgba(35, 35, 45, 1), rgba(45, 45, 55, 1)) !important;
+    border: 2px solid rgba(120, 190, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 1) !important;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8) !important;
+    /* Neumorphism hover sin transformación */
+    box-shadow: 
+        inset 4px 4px 10px rgba(0, 0, 0, 0.6),
+        inset -4px -4px 10px rgba(100, 100, 110, 0.3),
+        0 8px 24px rgba(0, 0, 0, 0.4),
+        0 4px 12px rgba(120, 190, 255, 0.4),
+        0 0 0 2px rgba(120, 190, 255, 0.3) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12' viewBox='0 0 16 12'%3E%3Cdefs%3E%3ClinearGradient id='arrowHover' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2378DCFF;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2360AAFF;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23arrowHover)' d='M8 12L0 4h16z'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 12px center !important;
+    background-size: 12px 8px !important;
+}
+
+/* Estilos para el dropdown contenedor cuando se abre */
+.compact-select:focus,
+.compact-select[size],
+.compact-select[multiple] {
+    outline: none !important;
+    border: 1px solid rgba(120, 220, 255, 0.3) !important;
+    background: linear-gradient(145deg, rgba(20, 20, 28, 0.98), rgba(35, 35, 42, 0.98)) !important;
+    border-radius: 12px !important;
+    box-shadow: 
+        inset 3px 3px 8px rgba(0, 0, 0, 0.5),
+        inset -3px -3px 8px rgba(80, 80, 90, 0.2),
+        0 4px 16px rgba(0, 0, 0, 0.3),
+        0 2px 6px rgba(96, 170, 255, 0.3),
+        0 0 0 1px rgba(96, 170, 255, 0.2) !important;
+    backdrop-filter: blur(15px) !important;
+    /* Flecha focus rotada */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='12' viewBox='0 0 16 12'%3E%3Cdefs%3E%3ClinearGradient id='arrowFocus' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2390E0FF;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%2360AAFF;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23arrowFocus)' d='M8 0L16 8H0z'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 12px center !important;
+    background-size: 12px 8px !important;
+}
+
+/* Estilos específicos para el dropdown abierto (contenedor de opciones) */
+/* Eliminando TODOS los bordes del navegador */
+.compact-select:focus-visible,
+.compact-select:focus-within,
+.compact-select:-moz-focusring,
+.compact-select:active,
+.compact-select:focus:active {
+    outline: none !important;
+    border: 2px solid rgba(96, 170, 255, 0.5) !important;
+    box-shadow: 
+        inset 3px 3px 8px rgba(0, 0, 0, 0.5),
+        inset -3px -3px 8px rgba(80, 80, 90, 0.2),
+        0 4px 16px rgba(0, 0, 0, 0.3),
+        0 2px 6px rgba(96, 170, 255, 0.2),
+        0 0 0 1px rgba(96, 170, 255, 0.15) !important;
+}
+
+/* Estilo específico para Webkit browsers */
+.compact-select::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* Estilo para Firefox */
+.compact-select {
+    scrollbar-width: none !important;
+    appearance: none !important;
+    -moz-appearance: none !important;
+}
+
+/* Intentando redondear el dropdown del navegador */
+.compact-select {
+    border-radius: 12px !important;
+}
+
+/* Para navegadores Webkit - solo estilos básicos del selector */
+.compact-select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.compact-select::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.compact-select::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+/* Estilos para las opciones del dropdown - Fondo oscuro consistente */
+.compact-select option {
+    background: linear-gradient(145deg, rgba(20, 20, 28, 0.98), rgba(35, 35, 42, 0.98)) !important;
+    background-color: rgba(20, 20, 28, 0.98) !important;
+    color: rgba(240, 240, 245, 0.95) !important;
+    padding: 12px 16px !important;
+    font-weight: 600 !important;
+    border: none !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    min-height: 36px !important;
+    text-align: center !important;
+    letter-spacing: 0.3px !important;
+    border-radius: 8px !important;
+    margin: 1px 2px !important;
+}
+
+.compact-select option:hover,
+.compact-select option:focus {
+    background: linear-gradient(135deg, rgba(96, 170, 255, 0.8), rgba(60, 150, 255, 0.9)) !important;
+    background-color: rgba(96, 170, 255, 0.8) !important;
+    color: rgba(255, 255, 255, 1) !important;
+    font-weight: 700 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 8px !important;
+    transform: scale(1.02) !important;
+    box-shadow: 
+        inset 0 1px 3px rgba(255, 255, 255, 0.2),
+        0 2px 8px rgba(96, 170, 255, 0.3) !important;
+}
+
+.compact-select option:checked,
+.compact-select option:selected {
+    background: linear-gradient(135deg, rgba(96, 170, 255, 1), rgba(60, 150, 255, 1)) !important;
+    background-color: rgba(96, 170, 255, 1) !important;
+    color: rgba(255, 255, 255, 1) !important;
+    font-weight: 800 !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+    border-radius: 8px !important;
+    box-shadow: 
+        inset 0 0 0 2px rgba(255, 255, 255, 0.3),
+        inset 0 2px 4px rgba(255, 255, 255, 0.1),
+        0 2px 12px rgba(96, 170, 255, 0.4) !important;
+}
+
+/* Dropdown abierto con fondo oscuro */
+.compact-select:focus option,
+.compact-select[size] option {
+    background: linear-gradient(145deg, rgba(30, 30, 35, 0.98), rgba(25, 25, 30, 0.98)) !important;
+    background-color: rgba(30, 30, 35, 0.98) !important;
+    backdrop-filter: blur(15px) !important;
+    border-radius: 8px !important;
+    margin: 3px 4px !important;
+    border: 1px solid rgba(96, 170, 255, 0.1) !important;
+}
+
+/* Mejoras adicionales para el dropdown nativo */
+.compact-select {
+    /* Forzar mejor renderizado del dropdown */
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+.compact-select:active {
+    transform: translateY(1px) scale(0.98);
+    box-shadow: 
+        inset 5px 5px 10px rgba(0, 0, 0, 0.7),
+        inset -5px -5px 10px rgba(100, 100, 110, 0.1),
+        0 1px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Efectos adicionales para el selector de velocidad */
+.compact-select {
+    will-change: transform, box-shadow;
+}
+
+/* Animación suave para opciones de velocidad */
+.compact-select option {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Glow effect para velocidades altas */
+.compact-select[value*="1.5"], 
+.compact-select[value*="2.0"] {
+    box-shadow: 
+        inset 2px 2px 6px rgba(0, 0, 0, 0.4),
+        inset -2px -2px 6px rgba(70, 70, 80, 0.15),
+        0 3px 12px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(255, 170, 96, 0.3),
+        0 0 20px rgba(255, 170, 96, 0.1);
+}
+
+/* Estado mini neumorphism */
+.audio-player-global .player-status-mini {
+    padding: 8px 16px !important;
+    background: rgba(20, 20, 25, 0.8) !important;
+    color: rgba(180, 180, 180, 0.8) !important;
+    font-size: 11px !important;
+    text-align: center !important;
+    border-radius: 0 0 24px 24px !important;
+    font-weight: 500 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+    border-top: 1px solid rgba(100, 200, 255, 0.1) !important;
+    /* Neumorphism */
+    box-shadow: 
+        inset 0 3px 6px rgba(0, 0, 0, 0.3),
+        inset 0 -1px 2px rgba(60, 60, 70, 0.1) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    position: relative !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Estados especiales */
+.audio-player-global .compact-player.playing .player-status-mini {
+    color: rgba(100, 200, 255, 0.9) !important;
+    background: rgba(25, 25, 30, 0.9) !important;
+    animation: glow 2s ease-in-out infinite alternate !important;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 
+            inset 0 3px 6px rgba(0, 0, 0, 0.3),
+            inset 0 -1px 2px rgba(60, 60, 70, 0.1);
+    }
+    to {
+        box-shadow: 
+            inset 0 3px 6px rgba(0, 0, 0, 0.3),
+            inset 0 -1px 2px rgba(60, 60, 70, 0.1),
+            0 0 10px rgba(100, 200, 255, 0.3);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+    .compact-player {
+        width: 320px !important;
+    }
+    
+    .player-main {
+        padding: 16px 16px 12px;
+        gap: 12px;
+    }
+    
+    .compact-btn {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .compact-btn img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Reproductor minimizado - posición fija inferior derecha */
+.audio-player-global .compact-player.minimized {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important; 
+    width: 185px !important;  
+    height: 70px !important; 
+    min-width: 185px !important;
+    max-width: 185px !important;
+    min-height: 70px !important;
+    max-height: 70px !important;
+    z-index: 10000 !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    cursor: default !important;
+    transition: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0px !important; 
+    padding: 0px !important; 
+    overflow: visible !important; 
+    /* Eliminar bordes y outlines */
+    outline: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    box-sizing: border-box !important;
+}
+
+/* Eliminar efectos visuales durante interacciones del reproductor minimizado */
+.audio-player-global .compact-player.minimized:focus,
+.audio-player-global .compact-player.minimized:focus-within,
+.audio-player-global .compact-player.minimized:active {
+    outline: none !important;
+    border: none !important;
+}
+
+/* Estado de arrastre para reproductor minimizado */
+.audio-player-global .compact-player.minimized.dragging {
+    outline: none !important;
+    border: none !important;
+    transition: none !important; 
+    transform: none !important;
+    will-change: transform !important; 
+}
+
+.compact-player.minimized.dragging * {
+    outline: none !important;
+    border: none !important;
+    transition: none !important; 
+    pointer-events: none !important; 
+}
+
+/* Contenedor para centrar el área de arrastre */
+.audio-player-global .compact-player.minimized .mini-drag-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;  
+    margin: 0 !important; 
+    position: relative !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Área de arrastre superior - contenedor celeste más grande */
+.audio-player-global .compact-player.minimized .mini-drag-area {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 6px 12px !important; 
+    cursor: grab !important;
+    background: linear-gradient(145deg, rgba(60, 150, 245, 1), rgba(40, 120, 220, 1)) !important;
+    border: 1px solid rgba(96, 170, 255, 1) !important;
+    border-radius: 8px !important; 
+    backdrop-filter: blur(10px) !important;
+    box-shadow: none !important;  
+    width: fit-content !important;
+    min-width: 40px !important; 
+    max-width: 60px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    margin: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow: visible !important;
+    outline: none !important;
+    transition: background 0.2s ease, border 0.2s ease !important; 
+}
+
+.audio-player-global .compact-player.minimized .mini-drag-area:hover {
+    background: linear-gradient(145deg, rgba(70, 160, 255, 1), rgba(50, 130, 230, 1)) !important;
+    border: 1px solid rgba(120, 190, 255, 1) !important;
+    box-shadow: none !important; 
+}
+
+.audio-player-global .compact-player.minimized .mini-drag-area:active {
+    cursor: grabbing !important;
+    background: linear-gradient(145deg, rgba(50, 140, 235, 1), rgba(30, 110, 200, 1)) !important;
+    border: 1px solid rgba(80, 160, 245, 1) !important;
+    box-shadow: none !important;  
+    transform: translateY(1px) !important;
+    outline: none !important;
+}
+
+/* Estado específico durante arrastre del área */
+.audio-player-global .compact-player.minimized.dragging .mini-drag-area {
+    cursor: grabbing !important;
+    transition: none !important; 
+    transform: none !important; 
+    will-change: auto !important;
+}
+
+/* Eliminar bordes durante el arrastre del mini-drag-area */
+.audio-player-global .compact-player.minimized .mini-drag-area:focus,
+.audio-player-global .compact-player.minimized .mini-drag-area:focus-within {
+    outline: none !important;
+}
+
+.audio-player-global .compact-player.minimized .mini-drag-icon {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: 13px !important; 
+    letter-spacing: 0px !important;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    outline: none !important; 
+}
+
+/* Contenedor de controles con barra de progreso */
+.audio-player-global .compact-player.minimized .mini-player-container {
+    background: rgba(25, 25, 30, 0.95) !important;
+    backdrop-filter: blur(15px) !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(100, 200, 255, 0.3) !important;
+    box-shadow: none !important;  
+    overflow: visible !important; 
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important; 
+    width: 185px !important;
+    max-width: 185px !important;
+    min-width: 185px !important;
+    height: 50px !important;
+    max-height: 50px !important;
+    min-height: 50px !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    outline: none !important;
+}
+
+/* Barra de progreso en el contenedor de controles */
+.audio-player-global .compact-player.minimized .mini-progress {
+    position: absolute !important;
+    top: 3px !important;
+    left: 1px !important; 
+    right: 1px !important;
+    height: 5px !important;
+    background: rgba(15, 15, 20, 0.9) !important;
+    overflow: visible !important; 
+    border-radius: 12px 12px 3px 3px !important;
+    border: 1px solid rgba(60, 60, 70, 0.3) !important;
+    box-shadow: none !important; 
+    cursor: pointer !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    outline: none !important;
+}
+
+.audio-player-global .compact-player.minimized .mini-progress-bar {
+    height: 100% !important;
+    background: linear-gradient(90deg, rgba(60, 150, 255, 0.9), rgba(96, 170, 255, 1)) !important;
+    transition: width 0.3s ease !important;
+    width: 0%;
+    border-radius: 12px 12px 2px 2px; 
+    box-shadow: none !important;
+    position: relative;
+}
+
+/* Handle/círculo deslizable para la barra de progreso minimizada */
+.compact-player.minimized .mini-progress::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: rgba(100, 200, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    cursor: pointer;
+    left: var(--progress-position, 0%);
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+}
+
+.compact-player.minimized .mini-progress:hover::after {
+    opacity: 1;
+}
+
+.compact-player.minimized .mini-progress::after:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    background: rgba(120, 220, 255, 1);
+}
+
+/* Controles en modo minimizado */
+.audio-player-global .compact-player.minimized .mini-controls {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 4px 8px 2px 8px !important; 
+    gap: 4px !important;
+    margin-top: 6px !important;
+    margin-bottom: 0px !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    outline: none !important;
+    width: 100% !important;
+}
+
+/* Botones minimizados - tamaño adecuado */
+.audio-player-global .compact-player.minimized .mini-btn {
+    width: 30px !important;
+    height: 30px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    background: rgba(35, 35, 40, 0.9) !important;
+    color: rgba(100, 200, 255, 0.9) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    font-size: 12px !important;
+    position: relative !important;
+    border: 1px solid rgba(100, 200, 255, 0.2) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    min-width: 30px !important;
+    max-width: 30px !important;
+    min-height: 30px !important;
+    max-height: 30px !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    outline: none !important;
+}
+
+.compact-player.minimized .mini-btn img {
+    width: 14px !important;
+    height: 14px !important;
+    filter: brightness(0) saturate(100%) invert(67%) sepia(100%) saturate(500%) hue-rotate(180deg) brightness(110%) contrast(110%) !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    background-image: none !important;
+    content: none !important;
+    text-indent: 0 !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    image-rendering: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    z-index: auto !important;
+    overflow: visible !important;
+    clip: auto !important;
+    clip-path: none !important;
+    mask: none !important;
+    -webkit-mask: none !important;
+}
+
+.audio-player-global .compact-player.minimized .mini-btn:hover {
+    background: rgba(45, 45, 50, 1) !important;
+    color: rgba(120, 220, 255, 1) !important;
+    border: 1px solid rgba(120, 220, 255, 0.3) !important;
+}
+
+.audio-player-global .compact-player.minimized .mini-btn:hover img {
+    filter: brightness(0) saturate(100%) invert(77%) sepia(100%) saturate(600%) hue-rotate(180deg) brightness(120%) contrast(120%) !important;
+}
+
+.audio-player-global .compact-player.minimized .mini-btn:active {
+    background: rgba(20, 20, 25, 0.8) !important;
+    border: 1px solid rgba(100, 200, 255, 0.3) !important;
+}
+
+/* Botón de play destacado en modo minimizado */
+.audio-player-global .compact-player.minimized .mini-btn.play-btn {
+    background: linear-gradient(135deg, rgba(60, 150, 255, 0.2) 0%, rgba(30, 100, 200, 0.3) 100%) !important;
+    border: 1px solid rgba(100, 200, 255, 0.3) !important;
+}
+
+.audio-player-global .compact-player.minimized .mini-btn.play-btn:hover {
+    background: linear-gradient(135deg, rgba(70, 160, 255, 0.3) 0%, rgba(40, 120, 220, 0.4) 100%) !important;
+    border: 1px solid rgba(120, 220, 255, 0.4) !important;
+}
+
+/* Botón de expandir especial - más pequeño */
+.audio-player-global .compact-player.minimized .expand-btn {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 6px !important;
+    background: rgba(35, 35, 40, 0.9) !important;
+    color: rgba(100, 200, 255, 0.9) !important;
+    border: 1px solid rgba(100, 200, 255, 0.2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    transition: all 0.2s ease !important;
+    min-width: 24px !important;
+    max-width: 24px !important;
+    min-height: 24px !important;
+    max-height: 24px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+.audio-player-global .compact-player.minimized .expand-btn img {
+    width: 12px !important;
+    height: 12px !important;
+    filter: brightness(0) saturate(100%) invert(67%) sepia(100%) saturate(500%) hue-rotate(180deg) brightness(110%) contrast(110%) !important;
+}
+
+.audio-player-global .compact-player.minimized .expand-btn:hover {
+    background: rgba(45, 45, 50, 1) !important;
+    color: rgba(120, 220, 255, 1) !important;
+    border: 1px solid rgba(120, 220, 255, 0.3) !important;
+    transform: scale(1.05) !important;
+}
+
+.audio-player-global .compact-player.minimized .expand-btn:hover img {
+    /* Ícono más brillante en hover */
+    filter: brightness(0) saturate(100%) invert(77%) sepia(100%) saturate(600%) hue-rotate(180deg) brightness(120%) contrast(120%) !important;
+}
+
+.audio-player-global .compact-player.minimized .expand-btn:active {
+    background: rgba(20, 20, 25, 0.8) !important;
+    border: 1px solid rgba(100, 200, 255, 0.3) !important;
+    transform: scale(0.95) !important;
+}
+
+/* Ocultar elementos del reproductor normal cuando está minimizado */
+.compact-player.minimized .drag-handle,
+.compact-player.minimized .player-header,
+.compact-player.minimized .player-main,
+.compact-player.minimized .progress-section,
+.compact-player.minimized .progress-container-top,
+.compact-player.minimized .player-drag-area,
+.compact-player.minimized .player-status-mini {
+    display: none !important;
+}
+
+/* Mostrar elementos del modo minimizado solo cuando está minimizado */
+.compact-player:not(.minimized) .mini-drag-container,
+.compact-player:not(.minimized) .mini-player-container {
+    display: none !important;
+}
+
+/* Panel de configuración de voz */
+.voice-settings-panel {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(10px) !important;
+    z-index: 2147483650 !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    padding-top: 15vh !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.15s ease !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    border: none !important;
+    outline: none !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+.voice-settings-panel.show {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.voice-settings-container {
+    background: linear-gradient(145deg, rgba(25, 25, 30, 0.98), rgba(35, 35, 42, 0.98)) !important;
+    backdrop-filter: blur(20px) !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: rgba(240, 240, 245, 0.98) !important;
+    width: 400px !important;
+    max-width: 90vw !important;
+    min-width: 350px !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+    box-shadow: 
+        0 25px 80px rgba(0, 0, 0, 0.3),
+        0 8px 32px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+    transform: scale(0.9) translateY(20px) !important;
+    transition: all 0.15s ease !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    display: block !important;
+}
+
+.voice-settings-panel.show .voice-settings-container {
+    transform: scale(1) translateY(0) !important;
+}
+
+/* Asegurar fuente fija para todos los elementos del modal */
+.voice-settings-panel *,
+.voice-settings-panel *::before,
+.voice-settings-panel *::after {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+.voice-settings-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 20px 24px 20px 24px !important;
+    margin: 0 !important;
+    margin-bottom: 0 !important;
+    border: none !important;
+    background: none !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
+.voice-settings-header h3 {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: rgba(140, 140, 140, 0.9) !important;
+    font-family: inherit !important;
+    line-height: normal !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.voice-close-btn {
+    background: rgba(45, 45, 50, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 6px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    max-width: 28px !important;
+    min-height: 28px !important;
+    max-height: 28px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+    font-family: inherit !important;
+    transition: all 0.2s ease !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    line-height: normal !important;
+    outline: none !important;
+    box-shadow: none !important;
+    position: relative !important;
+}
+
+.voice-close-btn:hover {
+    background: rgba(55, 55, 60, 0.9) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    transform: none !important;
+}
+
+.voice-settings-content {
+    padding: 0 24px 24px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    position: relative !important;
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.voice-setting-group {
+    margin-bottom: 20px !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    position: relative !important;
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.voice-setting-group label {
+    display: block !important;
+    margin-bottom: 8px !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    font-family: inherit !important;
+    color: rgba(200, 200, 205, 0.9) !important;
+    line-height: normal !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+}
+
+.voice-select {
+    width: 100% !important;
+    background: rgba(35, 35, 40, 0.9) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    color: rgba(240, 240, 245, 0.98) !important;
+    padding: 12px 16px !important;
+    font-size: 14px !important;
+    font-family: inherit !important;
+    outline: none !important;
+    transition: all 0.2s ease !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    line-height: normal !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    cursor: pointer !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+.voice-select:focus {
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.05) !important;
+}
+
+.voice-slider {
+    width: 100% !important;
+    height: 6px !important;
+    background: rgba(100, 100, 110, 0.4) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    outline: none !important;
+    margin: 8px 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+    position: relative !important;
+    display: block !important;
+    font-family: inherit !important;
+}
+
+.voice-slider:hover {
+    background: rgba(120, 120, 130, 0.5) !important;
+}
+
+.voice-slider::-webkit-slider-track {
+    height: 6px !important;
+    background: linear-gradient(to right, rgba(96, 170, 255, 0.8) 0%, rgba(96, 170, 255, 0.8) var(--value, 0%), rgba(100, 100, 110, 0.4) var(--value, 0%), rgba(100, 100, 110, 0.4) 100%) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    outline: none !important;
+}
+
+.voice-slider::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    appearance: none !important;
+    width: 14px !important;
+    height: 14px !important;
+    background: rgba(96, 170, 255, 0.9) !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    border: none !important;
+    margin-top: -4px !important;
+    outline: none !important;
+}
+
+.voice-slider::-webkit-slider-thumb:hover {
+    background: rgba(110, 180, 255, 1) !important;
+}
+
+.voice-slider::-moz-range-track {
+    height: 6px !important;
+    background: rgba(100, 100, 110, 0.4) !important;
+    border: none !important;
+    border-radius: 10px !important;
+    outline: none !important;
+}
+
+.voice-slider::-moz-range-thumb {
+    width: 14px !important;
+    height: 14px !important;
+    background: rgba(96, 170, 255, 0.9) !important;
+    border-radius: 50% !important;
+    cursor: pointer !important;
+    border: none !important;
+    outline: none !important;
+    -moz-appearance: none !important;
+}
+
+.voice-slider::-moz-range-thumb:hover {
+    background: rgba(110, 180, 255, 1) !important;
+}
+
+/* Estilos adicionales para Firefox */
+.voice-slider::-moz-focus-outer {
+    border: none !important;
+    outline: none !important;
+}
+
+.voice-slider::-moz-range-progress {
+    background: rgba(96, 170, 255, 0.8) !important;
+    height: 6px !important;
+    border-radius: 10px !important;
+    border: none !important;
+}
+
+.voice-slider:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2) !important;
+}
+
+.test-voice-btn {
+    width: 100% !important;
+    background: linear-gradient(145deg, rgba(96, 170, 255, 0.2) 0%, rgba(60, 130, 255, 0.3) 100%) !important;
+    border: 1px solid rgba(120, 190, 255, 0.3) !important;
+    border-radius: 12px !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    padding: 12px 20px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    font-family: inherit !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    line-height: normal !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    word-spacing: normal !important;
+    outline: none !important;
+    display: block !important;
+    position: relative !important;
+    /* Neumorphism transparente */
+    box-shadow: 
+        inset 3px 3px 8px rgba(0, 0, 0, 0.15),
+        inset -3px -3px 8px rgba(255, 255, 255, 0.05),
+        0 2px 8px rgba(96, 170, 255, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.test-voice-btn:hover {
+    background: linear-gradient(145deg, rgba(110, 180, 255, 0.3) 0%, rgba(70, 140, 255, 0.4) 100%) !important;
+    border-color: rgba(140, 210, 255, 0.4) !important;
+    color: rgba(255, 255, 255, 1) !important;
+    /* Neumorphism hover */
+    box-shadow: 
+        inset 4px 4px 10px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 10px rgba(255, 255, 255, 0.08),
+        0 4px 12px rgba(96, 170, 255, 0.3) !important;
+}
+
+/* Estilos para el control de velocidad */
+.speed-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: 8px;
+}
+
+.speed-select {
+    background: rgba(35, 35, 40, 0.9);
+    border: 1px solid rgba(100, 200, 255, 0.2);
+    border-radius: 8px;
+    color: rgba(100, 200, 255, 0.9);
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.speed-select:hover {
+    background: rgba(45, 45, 50, 1);
+    border-color: rgba(120, 220, 255, 0.3);
+    color: rgba(120, 220, 255, 1);
+}
+
+.speed-select:focus {
+    background: rgba(45, 45, 50, 1);
+    border-color: rgba(120, 220, 255, 0.4);
+    color: rgba(120, 220, 255, 1);
+}
+
+.speed-select option {
+    background: rgba(25, 25, 30, 0.95);
+    color: rgba(200, 200, 200, 0.9);
+    padding: 4px 8px;
+}
+
+
+/* Animación de pulso para el emoji de carga */
+@keyframes loadingPulse {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+/* Aplicar animación al texto de progreso cuando está cargando */
+.audio-player-global .progress-text.loading {
+    animation: loadingPulse 1.5s ease-in-out infinite !important;
+}
+
+/* Estilo especial para el emoji/icono de carga */
+.audio-player-global .progress-current.loading {
+    animation: loadingPulse 1.5s ease-in-out infinite !important;
+    font-size: 12px !important;
+}
+
+/* Estado de carga en el status mini */
+.audio-player-global #statusMini.loading {
+    color: rgba(100, 200, 255, 0.9) !important;
+    font-style: italic !important;
+}
+
+/* Estilo para botones deshabilitados durante carga */
+.audio-player-global button:disabled {
+    opacity: 0.4 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+.audio-player-global button:disabled img {
+    opacity: 0.4 !important;
+    filter: grayscale(50%) !important;
+}
