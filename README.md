@@ -1,122 +1,135 @@
-# Speed Reader IA - AI-Powered Reading Assistant
+# Speed Reader IA
+
+AI-powered Chrome extension for text-to-speech and intelligent content analysis using Google Gemini API.
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![Manifest](https://img.shields.io/badge/manifest-v3-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-orange.svg)
 
-## Description
+## Overview
 
-Speed Reader IA is a powerful Chrome extension that combines text-to-speech capabilities with AI-powered content analysis using Google's Gemini API. Read any web content aloud, analyze images, understand code snippets, and get intelligent contextual assistance.
+Speed Reader IA combines text-to-speech capabilities with AI-powered content analysis. Read web content aloud, analyze images, understand code snippets, and get contextual AI assistance directly in your browser.
 
-## Key Features
+## Features
 
 ### Text-to-Speech
-- **Intelligent Reading**: Read any selected text on any webpage
-- **Voice Controls**: Play, pause, adjust speed and volume
-- **Compact Player**: Floating audio player that follows you across pages
-- **Multiple Languages**: Support for various languages and accents
+- Read selected text on any webpage
+- Adjustable speed and volume controls
+- Floating compact player
+- Multi-language support
 
-### AI-Powered Analysis
-- **Image Description**: Analyze and describe images using Gemini Vision
-- **Code Analysis**: Understand code snippets with detailed explanations
-- **Smart Queries**: Ask questions about selected content
-- **Context-Aware**: Get relevant answers based on webpage context
+### AI Analysis
+- Image description using Gemini Vision
+- Code snippet analysis and explanation
+- Custom queries with context awareness
+- Smart content interpretation
 
 ### History Management
-- **Query History**: Keep track of all your AI consultations
-- **Image & Code Analysis**: Separate history for different content types
-- **Export Options**: Export your consultation history
-- **Auto-Cleanup**: Configurable automatic history cleanup
+- Track AI consultations
+- Separate history for images and code
+- Export consultation data
+- Configurable auto-cleanup
 
-### Multilingual Support
-- **English & Spanish**: Full interface translation
-- **Browser Language Detection**: Automatically adapts to your browser language
-- **Custom Translations**: Extensible translation system
+### Multilingual Interface
+- English and Spanish support
+- Automatic language detection
+- Extensible translation system
+
+## Installation
+
+### From Source
+1. Clone this repository
+2. Open Chrome and navigate to `chrome://extensions/`
+3. Enable "Developer mode"
+4. Click "Load unpacked" and select the extension directory
+
+### Requirements
+- Google Chrome or Chromium-based browser
+- Gemini API key (free tier available at [Google AI Studio](https://makersuite.google.com/app/apikey))
 
 ## Configuration
 
-### Gemini API Key (Required)
-1. Get your free API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+### API Key Setup
+1. Obtain a free API key from Google AI Studio
 2. Click the extension icon in your browser
-3. Enter your API key in the configuration section
-4. Save settings
+3. Enter your API key in the settings
+4. Configure optional preferences (speed, voice, history limits)
 
-### Optional Settings
-- **Reading Speed**: Adjust text-to-speech speed (0.5x - 2.0x)
-- **Voice Selection**: Choose from available system voices
-- **History Limits**: Configure maximum saved consultations
-- **Auto-Cleanup**: Set automatic history deletion periods
+### Available Settings
+- Reading speed (0.5x to 2.0x)
+- Voice selection
+- History retention limits
+- Automatic cleanup intervals
 
-## How to Use
+## Usage
 
-### Text-to-Speech
-1. Select any text on a webpage
-2. Click the "Read" button in the contextual menu
-3. Use the floating player to control playback
+### Reading Text
+1. Select text on any webpage
+2. Click "Read" in the contextual menu
+3. Control playback with the floating player
 
-### Image Analysis
+### Analyzing Images
 1. Right-click on any image
-2. Select "Describe Image" from the context menu
-3. View AI-generated description and ask follow-up questions
+2. Select "Describe Image"
+3. View AI-generated description
 
-### Code Analysis
-1. Select code snippet on any webpage
-2. Right-click and select "Analyze Code"
-3. Get detailed explanation and documentation
+### Analyzing Code
+1. Select code snippet
+2. Right-click and choose "Analyze Code"
+3. Review detailed explanation
 
-## Privacy & Security
+## Privacy
 
-- **No Data Collection**: We don't collect or store any user data
-- **API Key Encryption**: Your API key is encrypted locally
-- **Local Storage**: All history is stored locally in your browser
-- **Optional Features**: All AI features require explicit user consent
-- **Transparent Code**: Open source for community review
+- No data collection or tracking
+- API key encrypted and stored locally
+- All history stored in browser local storage
+- No external servers or analytics
+- Open source and auditable
 
-## Permissions Explained
+See [PRIVACY.md](PRIVACY.md) for complete privacy policy.
 
-- **activeTab**: Access current tab for reading content
+## Permissions
+
+- **activeTab**: Access current tab content for reading
 - **storage**: Save settings and history locally
 - **tts**: Text-to-speech functionality
-- **tabs**: Communicate between extension components
-- **scripting**: Inject content scripts for features
-- **host_permissions**: Access web pages and Gemini API
+- **tabs**: Extension component communication
+- **scripting**: Content script injection
+- **host_permissions**: Web page access and Gemini API communication
 
-## Technical Details
+## Technical Stack
 
-- **Manifest Version**: 3
-- **Framework**: Vanilla JavaScript
-- **AI Model**: Google Gemini 1.5 Flash
-- **Storage**: Chrome Storage API (local & sync)
-- **Architecture**: Service Worker + Content Scripts
+- Manifest Version 3
+- Vanilla JavaScript
+- Google Gemini 1.5 Flash
+- Chrome Storage API
+- Service Worker architecture
+
+## Development
+
+### Building
+No build process required. Load directly as unpacked extension.
 
 ## Changelog
 
-### Version 1.0.0 (Current)
+### Version 1.0.0
 - Initial release
 - Text-to-speech with compact player
-- Image and code analysis
+- Image and code analysis via Gemini
 - Multilingual support (EN/ES)
 - History management with export
 - Contextual AI queries
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-##  Author
-
-Created with ❤️ by I
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 
-- Google Gemini API for AI capabilities
-- Chrome Extensions documentation
+- Google Gemini API
+- Chrome Extensions Platform
 - Open source community
 
 ---
 
-**Note**: This extension requires a Gemini API key to function. Get your free key at [Google AI Studio](https://makersuite.google.com/app/apikey).
+**Note**: Gemini API key required for AI features. Free tier available at [Google AI Studio](https://makersuite.google.com/app/apikey).

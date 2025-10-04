@@ -1,102 +1,113 @@
-# Privacy Policy for Speed Reader IA
+# Privacy Policy
 
-**Last Updated**: October 1, 2025
+Last Updated: October 4, 2025
 
-## Introduction
+## Overview
 
-Speed Reader IA ("we", "our", or "the extension") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use our Chrome extension.
+Speed Reader IA is committed to protecting user privacy. This policy explains how the extension handles information.
 
-## Information We DO NOT Collect
+## Data Collection
 
-- **No Personal Data**: We do not collect, store, or transmit any personal information
-- **No Browsing History**: We do not track or record your browsing activity
-- **No Analytics**: We do not use analytics or tracking services
-- **No Third-Party Sharing**: We do not share any data with third parties
+This extension does NOT collect, store, or transmit any personal information to external servers.
 
-## Information Stored Locally
+### What We Do Not Collect
+- Personal identification information
+- Browsing history or activity
+- Usage analytics or metrics
+- Location data
+- Any data transmitted to third-party servers
 
-The extension stores the following information **locally on your device only**:
+## Local Storage
+
+The extension stores data locally on your device only:
 
 ### User Preferences
-- Reading speed settings
-- Voice selection preferences
-- UI language preference
-- History retention settings
+- Reading speed and voice settings
+- Interface language preference
+- History retention configuration
 
-### Gemini API Key
-- Encrypted and stored locally in Chrome's sync storage
-- Never transmitted to our servers (we don't have servers)
-- Used only to communicate directly with Google's Gemini API
+### API Key
+- Gemini API key encrypted and stored in Chrome sync storage
+- Used exclusively for direct communication with Google Gemini API
+- Never transmitted to any servers operated by this extension
 
 ### Consultation History
-- Image analysis queries and responses
-- Code analysis queries and responses
-- Custom AI queries and responses
-- All stored locally in Chrome's local storage
-- Can be cleared at any time by the user
+- AI query results (image descriptions, code analysis, custom queries)
+- Stored in Chrome local storage
+- User-controllable deletion and export
 
 ## Third-Party Services
 
 ### Google Gemini API
-When you use AI features, content is sent directly from your browser to Google's Gemini API:
-- **What is sent**: Selected text, images, or code for analysis
-- **Purpose**: To provide AI-powered descriptions and answers
-- **Google's Privacy Policy**: https://policies.google.com/privacy
-- **Your API Key**: You provide your own API key, giving you control
+AI features send content directly from your browser to Google's Gemini API:
+- Selected text, images, or code for analysis
+- Subject to Google's Privacy Policy: https://policies.google.com/privacy
+- User provides their own API key for direct control
 
-### Text-to-Speech (TTS)
-- Uses Chrome's built-in TTS engine
-- No data leaves your device
-- Processed entirely locally
+### Chrome Text-to-Speech
+- Uses browser's native TTS engine
+- All processing occurs locally
+- No data transmission
 
 ## Data Security
 
-- **Encryption**: Your API key is encrypted before storage
-- **Local Storage**: All data remains on your device
-- **No Servers**: We don't operate any servers to collect data
-- **Open Source**: Code is transparent and auditable
+- API key encrypted before local storage
+- No external servers operated by this extension
+- All data remains on user's device
+- Open source code available for review
 
-## Your Control
+## User Control
 
-You have complete control over your data:
-- **Clear History**: Delete consultation history anytime
-- **Remove API Key**: Clear your API key from settings
-- **Uninstall**: Removes all locally stored data
+Users maintain complete control:
+- Delete history at any time via settings
+- Clear API key from extension
+- Uninstall removes all stored data
 
-## Permissions Explained
+## Permissions Justification
 
-The extension requests these permissions for functionality:
+- **activeTab**: Read selected content for TTS and AI analysis
+- **storage**: Save preferences locally on device
+- **tts**: Provide text-to-speech functionality
+- **tabs**: Enable communication between extension components
+- **scripting**: Inject content scripts for features
+- **host_permissions**: Access web pages and communicate with Gemini API
 
-- **activeTab**: To read selected content for TTS and AI analysis
-- **storage**: To save your preferences locally
-- **tts**: To provide text-to-speech functionality
-- **tabs**: To communicate between extension components
-- **scripting**: To inject content scripts for features
-- **host_permissions**: To access webpages and Gemini API
-
-**Important**: These permissions do NOT mean we collect or transmit your data.
+These permissions do not enable data collection or external transmission beyond user-initiated Gemini API requests.
 
 ## Children's Privacy
 
-Our extension does not knowingly collect any information from children under 13. If you are under 13, please obtain parental consent before using AI features that require an API key.
+This extension does not target or knowingly collect information from users under 13. Parental consent recommended for use of AI features requiring API key.
 
-## Changes to This Policy
+## Policy Updates
 
-We may update this Privacy Policy from time to time. We will notify users of any material changes by updating the "Last Updated" date.
+This policy may be updated periodically. Material changes will be reflected in the "Last Updated" date.
 
 ## Data Retention
 
-- **Local Data**: Retained until you clear it or uninstall the extension
-- **No Server Data**: We don't retain any data on servers
+- Local data retained until user deletion or extension uninstall
+- No server-side data retention
 
-## Your Rights
+## User Rights
 
-Under GDPR and similar privacy laws, you have the right to:
-- Access your data (stored locally on your device)
-- Delete your data (via extension settings or uninstall)
-- Export your data (via history export feature)
+Users may:
+- Access data stored locally on their device
+- Delete data via extension settings or uninstall
+- Export history through built-in export feature
 
 ## Compliance
+
+This extension is designed to comply with:
+- General Data Protection Regulation (GDPR)
+- California Consumer Privacy Act (CCPA)
+- Chrome Web Store policies
+
+## Contact
+
+For privacy concerns or questions, please open an issue in the project repository.
+
+---
+
+This privacy policy applies to Speed Reader IA Chrome extension version 1.0.0 and later.
 
 This extension complies with:
 - Chrome Web Store policies
